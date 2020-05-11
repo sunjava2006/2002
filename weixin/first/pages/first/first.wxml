@@ -1,0 +1,11 @@
+<swiper id="ad" autoplay="true" circular="true" indicator-dots="true" indicator-color="white" indicator-active-color="yellow" interval="2500" duration="1000">
+    <swiper-item>
+        <image src="/imgs/1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+        <image src="/imgs/2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+        <image src="/imgs/3.jpg"></image>
+    </swiper-item>
+</swiper>

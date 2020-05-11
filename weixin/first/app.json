@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/mypage/mypage",
+    "pages/first/first",
+ 
+    "pages/logs/logs",
+    "pages/index/index"
+   
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ff5555",
+    "navigationBarTitleText": "我的第一个微信小程序",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "position": "bottom",
+    "backgroundColor": "#ccc",
+    "color":"#fff",
+    "selectedColor":"#efc",
+    "list": [
+      {
+        "pagePath": "pages/first/first",
+        "text": "first",
+        "iconPath": "imgs/logs.png",
+        "selectedIconPath" : "imgs/logs_s.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "logs",
+        "iconPath": "imgs/logs.png",
+        "selectedIconPath" : "imgs/logs_s.png"
+      },
+      {
+        "pagePath": "pages/mypage/mypage",
+        "text": "mypage",
+        "iconPath": "imgs/my.png",
+        "selectedIconPath" : "imgs/my_s.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "index",
+        "iconPath": "imgs/home.png",
+        "selectedIconPath" : "imgs/home_s.png"
+      }
+    ]
+  }
+}

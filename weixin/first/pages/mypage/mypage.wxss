@@ -1,0 +1,13 @@
+text{
+  color: red;
+}
+input{
+  border: solid black 1px;
+  height: 160rpx;
+}
+button{
+  color: blue;
+  flex-grow: 1;
+
+  border: solid red 1px;
+}

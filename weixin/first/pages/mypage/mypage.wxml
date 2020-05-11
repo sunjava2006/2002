@@ -1,0 +1,7 @@
+<text>{{sayHello}}MyPage</text>
+<input></input>
+<view style="width:100vw; display:flex;">
+    <button bindtap="click">click</button>
+</view>
+
+mmmmmmmmmmmmmmmmmmmm

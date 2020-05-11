@@ -1,0 +1,8 @@
+#ad{
+  height: 30vh;
+  width: 100vw;
+}
+#ad image{
+   width: 100vw;
+   height: 30vh;
+}
