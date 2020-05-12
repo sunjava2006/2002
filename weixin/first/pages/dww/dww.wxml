@@ -1,0 +1,8 @@
+<block wx:for="{{classes}}" wx:key="id">
+    <view>{{index+1}}:{{item}}</view><button name="{{item}}">delete</button>
+</block>
+
+<form bindsubmit="addProject">
+    <input id="ninput" name="newProject" style="border:solid black 1px; height:50rpx;"></input>
+    <button  form-type="submit" > add</button>
+</form>

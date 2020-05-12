@@ -1,10 +1,12 @@
 {
   "pages": [
-    "pages/mypage/mypage",
     "pages/first/first",
- 
+    "pages/mypage/mypage",
+   
     "pages/logs/logs",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/modal/modal",
+    "pages/dww/dww"
    
   ],
   "window": {
@@ -22,6 +24,7 @@
     "selectedColor":"#efc",
     "list": [
       {
+
         "pagePath": "pages/first/first",
         "text": "first",
         "iconPath": "imgs/logs.png",
@@ -38,12 +41,6 @@
         "text": "mypage",
         "iconPath": "imgs/my.png",
         "selectedIconPath" : "imgs/my_s.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "index",
-        "iconPath": "imgs/home.png",
-        "selectedIconPath" : "imgs/home_s.png"
       }
     ]
   }

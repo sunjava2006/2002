@@ -1,17 +1,27 @@
-// pages/first/first.js
+// pages/modal/modal.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    showModal:false,
+    list:[]
   },
-  open1(){
-      console.log("000000000000000000000000000000");
-      wx.navigateTo({
-          url: '/pages/index/index'
-      })
+  add(e){
+    this.setData({showModal:true})
+  },
+  cancel(e){
+    console.log("----------------------")
+    this.setData({showModal:false})
+  },
+  confirm(e){
+    console.log("----------------------")
+    var val = e.detail.value.name
+    var list = this.data.list;
+    list.push(val);
+    this.setData({list:list});
+    this.setData({showModal:false})
   },
   /**
    * 生命周期函数--监听页面加载
@@ -24,7 +34,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-      
+
   },
 
   /**

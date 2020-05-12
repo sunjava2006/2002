@@ -1,0 +1,21 @@
+<block wx:for="{{list}}">
+<view>
+<text>{{index+1}}:</text><text>{{item}}</text>
+</view>
+</block>
+
+<input-modal 	isShowModal="{{showModal}}" 
+		inputVal="hello" 
+    inputName="name"
+		modalTitle="输入课程名"
+		placeholder="Java"
+		inputType="text"
+		showDesc="这个新课程将添加到列表中" 
+		bindcustomBindInput="customBindInput" 
+		bindconfirm="confirm"
+		bindcancel="cancel"
+   >
+</input-modal>
+<button bindtap="add">add</button>
+
+

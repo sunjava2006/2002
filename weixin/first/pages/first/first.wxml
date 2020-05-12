@@ -9,3 +9,38 @@
         <image src="/imgs/3.jpg"></image>
     </swiper-item>
 </swiper>
+<view class="grid">
+    <view class="row">
+        <view>
+            <image src="/imgs/game.png" bindtap="open1"></image>
+        </view>
+        <view>
+            <image src="/imgs/game.png"></image>
+        </view>
+        <view>
+            <image src="/imgs/game.png"></image>
+        </view>
+    </view>
+    <view class="row">
+        <view>
+            <image src="/imgs/game.png"></image>
+        </view>
+        <view>
+            <image src="/imgs/game.png"></image>
+        </view>
+        <view>
+            <image src="/imgs/game.png"></image>
+        </view>
+    </view>
+    <view class="row">
+        <view>
+            <image src="/imgs/game.png"></image>
+        </view>
+        <view>
+            <image src="/imgs/game.png"></image>
+        </view>
+        <view>
+            <image src="/imgs/game.png"></image>
+        </view>
+    </view>
+</view>

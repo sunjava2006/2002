@@ -1,0 +1,40 @@
+<swiper autoplay="true" indicator-dots="true" circular="true">
+    <swiper-item id="s1"></swiper-item>
+    <swiper-item id="s2"></swiper-item>
+    <swiper-item id="s3"></swiper-item>
+</swiper>
+<scroll-view class="scroll" scroll-y="true">
+    <view class="grid">
+        <view>
+            <view></view>
+            <view></view>
+            <view></view>
+        </view>
+        <view>
+            <view></view>
+            <view></view>
+            <view></view>
+        </view>
+        <view>
+            <view></view>
+            <view></view>
+            <view></view>
+        </view>
+        <view>
+            <view></view>
+            <view></view>
+            <view></view>
+        </view>
+        <view>
+            <view></view>
+            <view></view>
+            <view></view>
+        </view>
+        <view>
+            <view></view>
+            <view></view>
+            <view></view>
+        </view>
+    </view>
+</scroll-view>
+

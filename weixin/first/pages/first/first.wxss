@@ -6,3 +6,28 @@
    width: 100vw;
    height: 30vh;
 }
+.grid{
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 100vw;
+}
+.row{
+    width: 100%;
+    flex-grow: 1;
+    /* border: solid red 1px; */
+    display: flex;
+    flex-direction: row;
+
+}
+.row>view{
+    /* border: solid red 1px; */
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row>view>image{
+    width: 150rpx;
+    height: 150rpx;
+}

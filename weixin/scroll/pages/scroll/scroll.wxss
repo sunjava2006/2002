@@ -1,0 +1,43 @@
+swiper{
+    height: 40vh;
+    width: 100vw;
+}
+#s1{
+   height: 40vh;
+   width: 100vw;
+   background: red;
+}
+#s2{
+   height: 40vh;
+   width: 100vw;
+   background: blue;
+}
+#s3{
+   height: 40vh;
+   width: 100vw;
+   background: gold;
+}
+.scroll{
+    width: 100vw;
+    height: 60vh;
+}
+.grid{
+    width: 100vw;
+    height: 1500rpx;
+    background: pink;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.grid>view{
+    border: solid red 1px;
+    flex-grow: 1;
+    display: flex;
+
+}
+.grid>view>view{
+    flex-grow: 1;
+    border: solid red 1px;
+
+}
