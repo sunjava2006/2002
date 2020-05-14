@@ -11,7 +11,7 @@
 </swiper>
 <view class="grid">
     <view class="row">
-        <view>
+        <view style="background:url('https://tpc.googlesyndication.com/daca_images/simgad/13063754865781208952')">
             <image src="/imgs/game.png" bindtap="open1"></image>
         </view>
         <view>
@@ -44,3 +44,4 @@
         </view>
     </view>
 </view>
+<web-view src="https://www.qq.com"></web-view>
