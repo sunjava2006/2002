@@ -1,24 +1,18 @@
-// miniprogram/pages/showNews/showNews.js
+// miniprogram/pages/templates/templates.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-             url:null
-          },
+
+    },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log(options);
-        var url = options.url + "?id=" + options.id;
-        console.log(url);
-        this.setData({ url:url});
 
-      
-        
     },
 
     /**

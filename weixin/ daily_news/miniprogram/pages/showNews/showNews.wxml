@@ -1,1 +1,3 @@
-<web-view src="https://www.qq.com"></web-view>
+<view>QQ</view>
+{{url}}
+<web-view src="{{url}}"></web-view>
