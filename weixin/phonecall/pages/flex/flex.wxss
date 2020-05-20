@@ -1,0 +1,6 @@
+/*.开头的叫class选择符。与class="parent"相匹配*/
+/* 样式表中，包含 样式名：样式值； */
+.parent{ 
+    display: flex; 
+    flex-direction: row;
+}

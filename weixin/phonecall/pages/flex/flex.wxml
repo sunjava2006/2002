@@ -1,0 +1,6 @@
+<view class="parent">
+    <view class="my">a</view>
+    <view class="my">b</view>
+    <view class="my">c</view>
+</view>
+

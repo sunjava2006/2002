@@ -1,0 +1,13 @@
+<block wx:for="{{phoneNumList}}" 
+       wx:for-item="i">
+    <view class="parent">
+        <image src="{{i.photo}}" class="photo"></image>
+        <view class="name">{{i.name}}</view>
+        <image src="/imgs/call_out.png" 
+            class="photo"
+            id="{{i.phone}}"
+            bindtap="call"></image>
+    </view>   
+    
+</block>
+

@@ -1,0 +1,20 @@
+
+    
+
+.photo{
+    width: 50rpx;
+    height: 50rpx;
+     
+}
+.parent{
+    display: flex;
+    height: 100rpx;
+   
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: solid gray 1rpx;
+}
+.name{
+    width: 500rpx;
+   
+}

@@ -1,0 +1,17 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  background-color: gainsboro; /*背景色*/
+  font-size: 3em;                /*文字大小*/
+  color: green;
+} 
+
+/* {
+   肤色：黑黑的；
+   毛发：浓密；
+} */
