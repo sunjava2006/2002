@@ -1,0 +1,18 @@
+<swiper autoplay="true" vertical="true" circular="true" >
+
+    <swiper-item>
+        <view style="width:100vw; text-align:center;">通知</view>
+        <view style="color:blue" >
+            大家好，我们每周1、3、
+            5、7晚上8点上课。
+        </view>
+    </swiper-item> 
+
+    <swiper-item>
+        <view>公告</view>
+        <view>
+            请没有加群的同学，抓紧。
+        </view>
+    </swiper-item> 
+
+</swiper>

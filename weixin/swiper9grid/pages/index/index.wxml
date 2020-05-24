@@ -1,0 +1,56 @@
+<swiper class="swiper" indicator-dots current="1" 
+        circular="true" indicator-color="white"   
+        indicator-active-color="orange"
+        autoplay="true" interval="3000" duration="1"
+        
+        >
+
+    <swiper-item class="swiper-item">
+        <image src="/imgs/1.jpg" class="item-img"></image>
+    </swiper-item>
+
+    <swiper-item class="swiper-item2">
+        <image src="/imgs/2.jpg" class="item-img"></image>
+    </swiper-item>
+
+    <swiper-item class="swiper-item3">
+        <image src="/imgs/3.jpg" class="item-img"></image>
+    </swiper-item>
+
+</swiper>
+
+<view class="parent">
+    <view class="row">
+        <view class="cell">
+            <image src="/imgs/home.png" class="img"></image> 
+        </view>
+        <view class="cell">
+            <image src="/imgs/home.png" class="img"></image> 
+        </view>
+        <view class="cell">
+            <image src="/imgs/home.png" class="img"></image> 
+        </view>
+    </view>
+    <view class="row">
+        <view class="cell">
+            <image src="/imgs/home.png" class="img"></image> 
+        </view>
+        <view class="cell">
+            <image src="/imgs/home.png" class="img"></image> 
+        </view>
+        <view class="cell">
+            <image src="/imgs/home.png" class="img"></image> 
+        </view>
+    </view>
+    <view class="row">
+        <view class="cell">
+            <image src="/imgs/home.png" class="img"></image> 
+        </view>
+        <view class="cell">
+            <image src="/imgs/home.png" class="img"></image> 
+        </view>
+        <view class="cell">
+            <image src="/imgs/home.png" class="img"></image> 
+        </view>
+    </view>
+</view>

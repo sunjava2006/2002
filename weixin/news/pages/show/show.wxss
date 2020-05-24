@@ -1,0 +1,13 @@
+.news-img{
+    width: 100vw;
+    height: 30vh;
+}
+.title{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.content{
+    color: #444;
+    text-indent: 2em; /*文字缩进*/
+}

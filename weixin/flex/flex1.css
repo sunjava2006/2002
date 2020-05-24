@@ -1,0 +1,25 @@
+.parent{
+    height: 500px;
+    width: 100%;
+    border: solid red 2px;
+    display: flex; /*设置弹性布局，一定要设置在父窗口上。*/
+    flex-direction: row; /*设置行排列。默认就是row*/
+}
+.child{
+    /* width: 100px; */
+    flex-grow: 1; /* 设置弹性，弹性值越大，弹性变形就越大。 */
+    height: 100px;
+    border: dashed blue 1px;
+}
+.d1{
+    width: 200px;
+    flex-grow: 0;
+}
+.d3{
+    flex-grow: 2;
+}
+.banel{
+    width: 100%;
+    height: 200px;
+    background:lightblue;
+}

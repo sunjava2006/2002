@@ -1,0 +1,48 @@
+.swiper{
+    height: 30vh;
+    width:100vw;
+    background: wheat;
+}
+.swiper-item{
+    background: yellow;
+    height: 30vh;
+    width:100vw;
+}
+.swiper-item2{
+    background: red;
+    height: 30vh;
+    width:100vw;
+}
+.swiper-item3{
+    background: greenyellow;
+    height: 30vh;
+    width:100vw;
+}
+.item-img{
+    height: 30vh;
+    width:100vw;
+}
+
+.parent{
+    display: flex;/*父为弹性*/
+    flex-direction: column; /*设置主轴是纵向的。默认是横向的。*/
+    height: 70vh;
+    /* background-color: orange; */
+}
+.row{
+    flex-grow: 1;
+    /* border: black solid 1px; */
+    display: flex;
+}
+.cell{
+    /* border: blue dashed 1px; */
+    flex-grow: 1;
+    display: flex;
+    justify-content: center; /*主轴居中*/
+    align-items: center; /*次轴居中*/
+    
+}
+.img{
+    width: 150rpx;
+    height: 150rpx;
+}

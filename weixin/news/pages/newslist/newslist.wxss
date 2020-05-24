@@ -1,0 +1,98 @@
+
+.search-bar{
+    height: 10vh;
+    width: 100vw;
+    background: #ff0000;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.search{
+    height: 80rpx;
+    width: 500rpx;
+    background: white;
+    border-radius: 15rpx; /*设置边框的圆角*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sch-img{
+    width: 50rpx;
+    height: 50rpx;
+}
+.input{
+    width: 400rpx;
+    height: 50rpx;
+    color: black;
+}
+.types-bar{
+    height: 8vh;
+    width: 100vw;
+    background: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.plus{
+    width: 80rpx;
+    height: 80rpx;
+    /* background-color: greenyellow; */
+    text-align: center; /*文字水平方向居中*/
+    line-height: 80rpx; /*设置文字行高，当与VIEW一样高时，文字居中*/
+    font-size: 1.5em;   /*设置文字为1.5倍的M的大小*/
+    font-weight: bold;  /*设置文字加粗*/
+}
+.scroll-types{
+    width: 670rpx;
+    height: 80rpx;
+    /* background-color: wheat; */
+}
+.content{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.content view{
+    width: 150rpx;
+}
+
+.scroll-newslist{
+    height: 82vh;
+    /* background-color: gold; */
+  
+}
+.items{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.news-item{
+    margin-top: 20rpx;
+    width: 730rpx;
+    display: flex;
+    flex-direction: column;
+    border-bottom: solid gray 1px;
+}
+.img-list{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    
+    color: #333;
+    font-size: 0.9em;
+}
+.img-list image{
+    width: 230rpx;
+    height: 180rpx;
+    
+}
+.info{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8em;
+    color: #555555;
+}

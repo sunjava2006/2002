@@ -1,0 +1,10 @@
+<image src="/imgs/1.jpg" class="img">
+</image>
+<scroll-view class="scroll" 
+scroll-y="true" 
+scroll-x="true">
+    <view class="content">
+        hello
+    </view>
+
+</scroll-view>

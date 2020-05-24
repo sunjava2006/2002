@@ -1,0 +1,4 @@
+/*标记选择符，匹配所有这个标记*/
+swiper{
+    height: 3em; width: 100vw;background: wheat;
+}

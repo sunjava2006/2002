@@ -1,0 +1,48 @@
+<view class="search-bar">
+    <view>搜索</view>
+    <view class="search">
+        <image src="/imgs/search.png" class="sch-img"></image>
+        <input class="input" placeholder="输入文字"></input>
+    </view>
+</view>
+
+<view class="types-bar">
+    <scroll-view class="scroll-types" scroll-x="true">
+        <view class="content">
+            <block wx:for="{{types}}">
+                <view>
+                    <view>{{item}}</view>
+                </view>
+
+            </block>
+        </view>
+
+
+    </scroll-view>
+    <view class="plus">+</view>
+</view>
+
+<scroll-view scroll-y="true" class="scroll-newslist">
+    <view class="items">
+        <block wx:for="{{[1,1,1,1,1,1,1]}}">
+            <view class="news-item" bindtap="showNews">
+                <view class="title">Python语言列为高考加分项</view>
+                <view class="img-list">
+                    <image src="/imgs/1.jpg"></image>
+                    <image src="/imgs/2.jpg"></image>
+                    <image src="/imgs/3.jpg"></image>
+                </view>
+                <view class="info">
+                    <view>中新网</view>
+                    <view>2020-5-20</view>
+                </view>
+            </view>
+
+
+        </block>
+
+
+    </view>
+
+
+</scroll-view>

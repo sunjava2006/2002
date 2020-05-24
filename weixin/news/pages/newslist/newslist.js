@@ -1,25 +1,31 @@
-// miniprogram/pages/showNews/showNews.js
+// pages/newslist/newslist.js
 Page({
 
     /**
      * 页面的初始数据
      */
     data: {
-             url:null
-          },
+        types:["头条","社会","国内","国际","娱乐","体育","军事","科技","财经","时尚"]
+    },
+
+    showNews:function(event){
+        /*打开一个新的页面*/
+        wx.navigateTo({
+            url: '/pages/show/show'
+        })
+    },
+
+
+
+
+
+
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        console.log(options);
-        var url = options.url;
-        url = decodeURIComponent(url);
-        console.log(url);
-        this.setData({ url:url});
 
-      
-        
     },
 
     /**

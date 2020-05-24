@@ -1,0 +1,19 @@
+{
+    "pages": [
+        
+        "pages/newslist/newslist",
+        "pages/show/show",
+        "pages/scroll/scroll",
+        "pages/index/index",
+        "pages/logs/logs"
+        
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ff0000",
+        "navigationBarTitleText": "每日新闻",
+        "navigationBarTextStyle": "white"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

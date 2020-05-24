@@ -1,0 +1,39 @@
+<html >
+<head>
+<style>
+     .parent{
+        height: 200px;
+        width: 100%;
+        border: solid red 2px;
+        display: flex;
+        flex-direction: row; /*设置的方向就是主轴方向*/
+        justify-content:space-evenly ; /*用来设置主轴方向的对齐(center\flex-end\flex-start\space-between\space-around)*/
+        align-items:stretch; /*对齐元素，在次轴方向上的对齐(center\flex-start\flex-end\stretch)*/
+     }
+     .child0{
+         width: 100px;
+         /* height: 100px; */
+         border: dashed blue 1px;
+     }
+     .child1{
+         width: 100px;
+         height: 100px;
+         border: dashed red 1px;
+     }
+     .child2{
+         width: 100px;
+         height: 100px;
+         border: dashed green 1px;
+         flex-grow: 0;
+     }
+
+</style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child0"></div>
+        <div class="child1"></div>
+        <div class="child2"></div>
+    </div>
+</body>
+</html>

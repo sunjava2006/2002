@@ -68,18 +68,14 @@ Page({
         console.log('id 中的 URL:')
         console.log(url);
 
-        url = url.replace("?", "&");
-
-        console.log("after replace----------------------------")
-        console.log(url)
+        url = encodeURIComponent(url)
+        console.log(url);
+       
 
 
         // 打开新的页面
         wx.navigateTo({
-            url: '/pages/showNews/showNews?url='+url 
-            //'https://v.juhe.cn/toutiao/s&&id=https%3A%2F%2Fmini.eastday.com%2Fmobile%2F200516205420423.html'
-
-
+            url: '/pages/showNews/showNews?url='+ url
         })
     },
 
