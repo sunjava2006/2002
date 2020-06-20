@@ -1,0 +1,7 @@
+input{
+    border: solid gray 1rpx;
+    /* background: lightgoldenrodyellow; */
+    height: 2em;
+    box-shadow: lightskyblue 0rpx 0rpx 15rpx;
+    border-radius: 15rpx;
+}

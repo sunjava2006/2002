@@ -1,0 +1,4 @@
+<view class="input-addone">
+    <text class="label">{{label}}</text>
+    <input type="{{input_type}}" class="input1"/>
+</view>

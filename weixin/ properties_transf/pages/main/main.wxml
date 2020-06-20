@@ -1,0 +1,8 @@
+<form bindsubmit="onsubmit">
+    <view class="input-group">
+         <input type="text" name="userName" placeholder="输入你的名字"></input>
+         <input type="text" password="true" name="passwd" placeholder="输入你的密码"></input>
+         <button class="info" form-type="submit" >确定</button>
+         <button  form-type="reset" >重置</button>
+    </view>
+</form>

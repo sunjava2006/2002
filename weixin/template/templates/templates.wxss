@@ -1,0 +1,18 @@
+/* .news-imgs{
+    display: flex;
+    justify-content:space-around;
+
+}
+.news-imgs>image{
+    width: 230rpx;
+    height: 180rpx;
+}
+.news-info{
+    display: flex;
+    justify-content: space-between;
+}
+.news-item{
+    border-bottom: solid gray 1rpx;
+    display: flex;
+    flex-direction: column;
+} */

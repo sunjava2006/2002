@@ -1,47 +1,46 @@
 {
-  "pages": [
-    "pages/first/first",
-    "pages/mypage/mypage",
-   
-    "pages/logs/logs",
-    "pages/index/index",
-    "pages/modal/modal",
-    "pages/dww/dww"
-   
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ff5555",
-    "navigationBarTitleText": "我的第一个微信小程序",
-    "navigationBarTextStyle": "white"
-  },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json",
-  "tabBar": {
-    "position": "bottom",
-    "backgroundColor": "#ccc",
-    "color":"#fff",
-    "selectedColor":"#efc",
-    "list": [
-      {
-
-        "pagePath": "pages/first/first",
-        "text": "first",
-        "iconPath": "imgs/logs.png",
-        "selectedIconPath" : "imgs/logs_s.png"
-      },
-      {
-        "pagePath": "pages/logs/logs",
-        "text": "logs",
-        "iconPath": "imgs/logs.png",
-        "selectedIconPath" : "imgs/logs_s.png"
-      },
-      {
-        "pagePath": "pages/mypage/mypage",
-        "text": "mypage",
-        "iconPath": "imgs/my.png",
-        "selectedIconPath" : "imgs/my_s.png"
-      }
-    ]
-  }
+    "pages": [
+  
+        "pages/modal/modal",
+        "pages/first/first",
+        "pages/mypage/mypage",
+        "pages/logs/logs",
+        "pages/index/index",
+        "pages/dww/dww"
+        
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ff5555",
+        "navigationBarTitleText": "我的第一个微信小程序",
+        "navigationBarTextStyle": "white"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "position": "bottom",
+        "backgroundColor": "#ccc",
+        "color": "#fff",
+        "selectedColor": "#efc",
+        "list": [
+            {
+                "pagePath": "pages/first/first",
+                "text": "first",
+                "iconPath": "imgs/logs.png",
+                "selectedIconPath": "imgs/logs_s.png"
+            },
+            {
+                "pagePath": "pages/logs/logs",
+                "text": "logs",
+                "iconPath": "imgs/logs.png",
+                "selectedIconPath": "imgs/logs_s.png"
+            },
+            {
+                "pagePath": "pages/modal/modal",
+                "text": "mypage",
+                "iconPath": "imgs/my.png",
+                "selectedIconPath": "imgs/my_s.png"
+            }
+        ]
+    }
 }

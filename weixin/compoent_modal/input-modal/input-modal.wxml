@@ -1,0 +1,18 @@
+<view class="compoent-input-modal" wx:if="{{show}}">
+    <form bindsubmit="onsubmit">
+        <view class="input-modal">
+            <view class="input-group">
+                <view class="input-title">{{title}}</view>
+                <input focus="true" class="input1 {{focus?'focus':'' }}" type="{{input_type}}" 
+                       name="{{input_name}}" placeholder="{{placeholder}}"
+                       bindfocus="onfocus" bindblur="onblur"></input>
+            </view>
+            <view class="btn-group">
+                <button bindtap="oncancel" >{{btn_canel_name}}</button>
+                <button type="primary" form-type="submit">{{btn_confirm_name}}</button>
+            </view>
+
+        </view>
+    </form>
+    
+</view>

@@ -1,0 +1,14 @@
+input{
+    width: 100vw;
+    height: 80rpx;
+    border: solid gray 1rpx;
+    border-radius: 15rpx;
+}
+picker{
+    width: 100vw;
+    height: 80rpx;
+    line-height: 80rpx;
+    border: solid gray 1rpx;
+    border-radius: 15rpx;
+    background-color: gainsboro;
+}

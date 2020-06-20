@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/first/first",
+    "pages/index/index"
+  ],
+  "window": {
+    "defaultTitle": "我的支付宝小程序",
+    "titleBarColor": "#888888",
+    "transparentTitle": "none",
+    "backgroundColor": "#b6c3e9"
+  },
+  "tabBar": {
+    "textColor": "#888888",
+    "selectedColor": "#1afa29",
+    "backgroundColor": "#eeeeee",
+    "items": [
+      {
+        "pagePath": "pages/first/first",
+        "name": "我的",
+        "icon": "/imgs/my.png",
+        "activeIcon": "/imgs/my_g.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "name": "首页",
+        "icon": "/imgs/home.png",
+        "activeIcon": "/imgs/home_g.png"
+      }
+    ]
+  }
+}

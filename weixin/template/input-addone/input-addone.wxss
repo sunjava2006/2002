@@ -1,0 +1,14 @@
+.input-addone{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+}
+.input1{
+    width: 80%;
+    border: solid #aaa 1rpx;
+}
+.label{
+    width: 20%;
+    background: yellow;
+}

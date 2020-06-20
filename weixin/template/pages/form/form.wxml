@@ -1,0 +1,5 @@
+<form bindsubmit="send">
+    <input name="userName" type="text" placeholder="输入你的名字" focus="true" cursor="100" confirm-type="search"></input>
+    <input name="passwd" type="text" password="true" placeholder="输入你的密码" ></input>
+    <button size="default" type="primary" form-type="submit">确定</button>
+</form>

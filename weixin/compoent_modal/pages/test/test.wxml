@@ -1,0 +1,16 @@
+
+
+<modal title="学科名" placeholder="一级学科名" btn_canel_name="忽略" btn_confirm_name="添加" show="{{show}}" bindmodalcancel="cancel" input_name="subjectName" bindmodalconfirm="getvalue"/>
+
+<view class="page">
+
+    <scroll-view scroll-y="true" class="scroll">
+        <view>
+            <block wx:for="{{list}}">
+                <view>{{item}}</view>
+            </block>
+        </view>
+    </scroll-view>
+    <button bindtap="add">添加学科</button>
+</view>
+

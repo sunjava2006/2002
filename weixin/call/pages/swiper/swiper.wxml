@@ -1,0 +1,53 @@
+<swiper circular="true" indicator-dots="true" indicator-color="white"
+    indicator-active-color="brown" current="1" autoplay="true" interval="2000" duration="2000">
+    <swiper-item class="item1">
+        <image src="/imgs/1.jpg"></image>
+    </swiper-item>
+    <swiper-item class="item2">
+        <image src="/imgs/2.jpg"></image>
+    </swiper-item>
+    <swiper-item class="item3">
+        <image src="/imgs/3.jpg"></image>
+    </swiper-item>
+</swiper>
+<view class="grid">
+
+    <view class="row">
+        <view class="cell">
+            <view>
+                <image src="/photos/my.png"></image>
+            </view>
+        </view>
+        <view class="cell">
+            <view></view>
+        </view>
+        <view class="cell">
+            <view></view>
+        </view>
+    </view>
+    <view class="row">
+        <view class="cell">
+            <view></view>
+        </view>
+        <view class="cell">
+            <view></view>
+        </view>
+        <view class="cell">
+            <view></view>
+        </view>
+    </view>
+    <view class="row">
+        <view class="cell">
+            <view></view>
+        </view>
+        <view class="cell">
+            <view></view>
+        </view>
+        <view class="cell">
+            <view></view>
+        </view>
+    </view>
+
+
+
+</view>

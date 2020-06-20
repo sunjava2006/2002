@@ -1,0 +1,4 @@
+page {
+  background: #17d837;
+  font-style: italic;
+}

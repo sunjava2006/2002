@@ -1,0 +1,30 @@
+<template name="news_item">
+    <view 
+          style=" border-bottom: solid gray 1rpx;display: flex;flex-direction: column;">
+        <view>{{item.title}}</view>
+        <view  style="display: flex; justify-content:space-around;">
+            <image src="{{item.thumbnail_pic_s}}" style="width: 230rpx;height: 180rpx;"></image>
+            <image src="{{item.thumbnail_pic_s02}}" style="width: 230rpx;height: 180rpx;"></image>
+            <image src="{{item.thumbnail_pic_s03}}" style="width: 230rpx;height: 180rpx;"></image>
+        </view>
+        <view  style="display: flex; justify-content: space-between;">
+            <view>{{item.author_name}}</view>
+            <view>{{item.date}}</view>
+        </view>
+    </view>
+</template>
+
+<template name="news_item2">
+    <view  
+          style=" border-bottom: solid gray 1rpx;display: flex;flex-direction: column;">
+        <view>{{item.title}}</view>
+        <view  style="display: flex; justify-content:space-around;">
+            <image src="{{item.thumbnail_pic_s}}" style="width: 370rpx;height: 280rpx;"></image>
+            <image src="{{item.thumbnail_pic_s02}}" style="width: 370rpx;height: 280rpx;"></image>
+        </view>
+        <view  style="display: flex; justify-content: space-between;">
+            <view>{{item.author_name}}</view>
+            <view>{{item.date}}</view>
+        </view>
+    </view>
+</template>

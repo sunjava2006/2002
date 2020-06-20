@@ -62,7 +62,7 @@ Component({
       this.setData({isfous:true})
     },
     bindBlur(){
-      this.setData({iffous:false})
+      this.setData({isfous:false})
     },
     _bindInput(e){
       console.log('_bindInput')

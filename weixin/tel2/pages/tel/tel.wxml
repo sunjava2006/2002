@@ -1,0 +1,3 @@
+<block wx:for="{{list}}" wx:for-item="item">
+    <view id="{{item.num}}" bindtap="call">{{item.name}}</view>
+</block>

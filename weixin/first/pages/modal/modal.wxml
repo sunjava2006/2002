@@ -17,5 +17,7 @@
    >
 </input-modal>
 <button bindtap="add">add</button>
+aa
+<input-group label="name" placeholder="名字" ></input-group>
 
 

@@ -1,0 +1,2 @@
+<view>{{userName}}</view>
+<view>{{passwd}}</view>

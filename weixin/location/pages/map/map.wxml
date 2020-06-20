@@ -1,0 +1,2 @@
+<map longitude="{{longitude}}" latitude="{{latitude}}" 
+    markers="{{markers}}" scale="16" circles="{{circles}}" polyline="{{line}}"></map>

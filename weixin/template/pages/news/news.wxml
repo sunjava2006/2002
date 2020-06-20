@@ -1,0 +1,20 @@
+<import src="/templates/templates.wxml"></import>
+<swiper current="{{current}}" bindchange="changeType">
+    <block wx:for="{{types}}" >
+        <swiper-item item-id="{{index}}">
+ 
+            <scroll-view scroll-y="true">
+                <view>
+                    <block wx:for="{{newsList}}">
+                        <view bindtap="show" id="{{item.url}}">
+                            <template is="news_item2" data="{{item}}"></template>
+                        </view>
+                        
+                    </block>
+
+                </view>
+            </scroll-view>
+        </swiper-item>
+    
+    </block>
+</swiper>

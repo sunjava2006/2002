@@ -1,0 +1,2 @@
+<my-input label="name" iput_type="text"/>
+<my-input label="age" iput_type="text"/>

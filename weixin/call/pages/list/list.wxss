@@ -1,0 +1,18 @@
+/* pages/list/list.wxss */
+.photo{
+    height: 80rpx;
+    width: 80rpx;
+}
+.people{
+    border-bottom: solid gray 1rpx;
+    display: flex; /*在父容器上设置display为弹性布局*/
+    flex-direction: row; /*display:flex默认的方向为row*/
+    justify-content: space-evenly;
+    margin-bottom: 20rpx;
+}
+.name{
+    width: 500rpx;
+    /* background: yellow; */
+    line-height: 80rpx;
+    text-shadow: gray 5rpx 5rpx 5rpx;
+}

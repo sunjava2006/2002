@@ -1,0 +1,4 @@
+<view style="display:flex;width:100vw">
+    <text>{{label}}</text>
+    <input type="{{type}}" placeholder="{{placeholder}}" style="flex-grow:1; border:solid black 1rpx;"></input>
+</view>

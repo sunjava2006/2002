@@ -1,0 +1,13 @@
+<!-- 
+
+<view>{{phoneList[0].name}}{{phoneList[0].phoneNum}}</view>
+<view>{{phoneList[1].name}}{{phoneList[1].phoneNum}}</view> -->
+
+<block wx:for="{{phoneList}}" wx:for-item="element" wx:for-index="idx">
+    <view class="people">
+        <image src="{{element.photo}}" class="photo"></image>
+        <view  bindtap="call" class="name">{{element.name}}</view>
+        <image src="/photos/call_out.png" class="photo" bindtap="call" id="{{element.phoneNum}}"></image>
+    </view>
+
+</block>

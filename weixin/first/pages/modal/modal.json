@@ -1,5 +1,6 @@
 {
   "usingComponents": {
-    "input-modal":"/components/input_modal/input_modal"
+    "input-modal":"/components/input_modal/input_modal",
+    "input-group":"/components/input_group/input_group"
   }
 }

@@ -1,0 +1,53 @@
+.compoent-input-modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000cc;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+.input-modal{
+    width: 500rpx;
+    height: 600rpx;
+    background: white;
+    border-radius: 25rpx;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group{
+    height: 350rpx;
+    /* border: solid red 1rpx; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn-group{
+    height: 250rpx;
+    /* border: solid red 1rpx; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.input-title{
+    height: 100rpx;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 100rpx;
+    text-shadow: gray 5rpx 5rpx 15rpx;
+}
+.input1{
+    width: 400rpx;
+    border: gray solid 1rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    border-radius: 15rpx;
+}
+
+.focus{
+    box-shadow: lightskyblue 0 0 15rpx;
+}
