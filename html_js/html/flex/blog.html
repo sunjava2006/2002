@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: gray;
+        }
+        .page{
+            width: 100%;
+            /* width: 1480px; */
+            margin: auto;
+            height: auto;
+            border: gray solid 1px;
+            background-color: honeydew;
+        }
+        .header{
+            height: 200px;
+            background: hotpink;
+        }
+        .footer{
+            height: 200px;
+            background-color: #444;
+        }
+        .main{
+            display: flex;
+        }
+        .side-bar{
+            width: 200px;
+            background-color:lightblue;
+            
+        }
+        iframe{
+            height: 1080px;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            
+        </div>
+        <div class="main">
+            <div class="side-bar">
+                <ul>
+                    <li><a href="http://www.qq.com" target="ifm">QQ</a></li>
+                    <li><a href="http://www.sina.com" target="ifm">sina</a></li>
+                </ul>
+            </div>
+            <iframe name="ifm" src="http://www.sina.com" frameborder="0"></iframe>
+            <div class="side-bar"></div>
+        </div>
+        <div class="footer"></div>
+
+    </div>
+</body>
+</html>

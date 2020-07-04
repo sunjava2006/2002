@@ -1,0 +1,4 @@
+<!--pages/first/first.wxml-->
+<text>大家好</text>
+<view>你好{{name}}</view>
+<image src="/imgs/logs.png"></image>

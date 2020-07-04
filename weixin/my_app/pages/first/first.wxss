@@ -1,0 +1,5 @@
+/*选择了当前页面中所胡image标记*/
+image{
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,38 @@
+{
+    "pages": [
+        "pages/first/first",
+        "pages/logs/logs",
+        "pages/index/index"
+       
+    ],
+    "window": {
+        "backgroundTextStyle": "dark",
+        "navigationBarBackgroundColor": "#008800",
+        "navigationBarTitleText": "我的APP",
+        "navigationBarTextStyle": "white"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/first/first",
+                "text": "first",
+                "iconPath": "/imgs/logs.png",
+                "selectedIconPath": "imgs/logs_g.png"
+            },
+            {
+                "pagePath": "pages/logs/logs",
+                "text": "日志",
+                "iconPath": "/imgs/logs.png",
+                "selectedIconPath": "imgs/logs_g.png"
+            },
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "/imgs/index.png",
+                "selectedIconPath": "imgs/index_g.png"
+            }
+        ]
+    }
+}

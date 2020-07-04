@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+        }
+        body{
+            font-size: 14px;
+        }
+        .page{
+            width: 100%;
+        }
+        .nav-bar{
+            width: 100%;
+            height: 50px;
+            border: solid gray 1px;
+            list-style-type: none;
+        }
+        .nav-bar>li{
+            float: left;
+        }
+        .nav-bar a{
+            height: 50;
+            display: inline-block;
+            line-height: 50px;
+            font-size: 1.2em;
+            padding: 0 20px 0 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s linear;
+        }
+        .nav-default{
+            background:#eee;
+        }
+        .nav-default a:hover{
+            background: gray;
+            color: #eee;
+            font-size: 1.4em;
+        }
+        .nav-black{
+            background: #333;
+        }
+        .nav-black a{
+            color:#eee;
+        }
+        .nav-black a:hover{
+            background: black;
+            font-size: 1.4em;
+        }
+
+        .nav-red{
+            background:red;
+        }
+        .nav-red a{
+            color:#eee;
+        }
+        .nav-red a:hover{
+            background: brown;
+            font-size: 1.4em;
+        }
+
+        .fixed-top{
+            position: fixed;
+            top: 0;
+        }
+
+        .main{
+            display: flex;
+            height: 2000px;
+            background: gold;
+        }
+        .side-bar{
+            height: 100%;
+            width: 200px;
+            background: url('./imgs/rose.jpg');
+        }
+        .view{
+            height: 100%;
+            flex-grow: 1;
+        }
+        .footer{
+            height: 200px;
+            background-color: #333;
+            color: #eee;
+            text-align: center;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <nav class="nav-bar nav-black fixed-top">
+            <li><a href="http://www.qq.com" target="ifm">医院简介</a></li>
+            <li><a href="http://www.huawei.com" target="ifm">科室管理</a></li>
+            <li><a href="" target="ifm">专家管理</a></li>
+            <li><a href="" target="ifm">预约管理</a></li>
+            <li><a href="" target="ifm">广告管理</a></li>
+        </nav>
+
+        <div class="main">
+            <section class="side-bar">
+
+
+            </section>
+            <iframe name="ifm" class="view" src="http://www.sina.com" frameborder="0"></iframe>
+        </div>
+        <footer class="footer">
+            版权所有&copy;
+        </footer>
+    </div>
+</body>
+</html>

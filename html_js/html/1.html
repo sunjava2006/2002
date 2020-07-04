@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>页面基本结构</title>
+        <style>
+            body{
+                background-color: yellow;
+                color: tomato;
+            }
+            h1{
+                color: lightblue; /*文字颜色*/
+                font-style: italic; /*斜体*/
+            }
+            p{
+                color: #555;  
+            }
+            /*id选择符，以＃开头。以匹配元素中id为h1a的元素*/
+            #h1a{
+                color:blue;
+            }
+            #h1b{
+                color: brown;
+            }
+            /*class选择符，以.开头。匹配class=p1的元素*/
+            .p1{
+                font-weight: bold;
+                /* color: black; */
+                background-color: white;
+            }
+        </style>
+    </head>
+    
+    <body>
+        hello
+        <h1 id="h1a">html文档结构</h1>
+        <p>
+            html文档由几个部分组成：文档类型定义、html标记是根标记（根元素）。子标记（head\body）
+        </p>
+        <h1 id="h1b">html文档结构</h1>
+        <p class="p1">
+            html文档由几个部分组成：文档类型定义、html标记是根标记（根元素）。子标记（head\body）
+        </p>
+        <h1>html文档结构</h1>
+        <p class="p1">
+            html文档由几个部分组成：文档类型定义、html标记是根标记（根元素）。子标记（head\body）
+        </p>
+    </body>
+
+</html>
