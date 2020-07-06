@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul>li{
+            color: red;
+        }
+        #lia+li{
+            color: blueviolet;
+        }
+        ol li:first-child{
+            font-weight: bold;
+        }
+        ol li:nth-last-child(2){
+            color: seagreen;
+        }
+        ol>li:nth-child(2n-1){
+            font-style: italic;
+        }
+        div a:nth-of-type(odd){
+            color: red;
+        }
+        div a:nth-last-of-type(1){
+            color:red;
+        }
+        div *:nth-last-of-type(1){
+            color: green;
+        }
+        ul,ol>li:only-child{
+            color:blue;
+        }
+        div:empty{
+            height: 30px;
+            background-color: red;
+        }
+        #lia~li{
+            font-size: 2em;
+        }
+
+        li:not(#lic){
+            color: gray;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li id="lia">a</li>
+        <li>b</li>
+        <li id="lic">c</li>
+        <li>d</li>
+        <li>e</li>
+    </ul>
+    <ol>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>e</li>
+    </ol>
+    <ol>
+        <li>hello</li>
+    </ol>
+    <div>
+        <a href="">a1</a>
+        <label for="">l1</label>
+        <a href="">a2</a>
+        <label for="">l2</label>
+        <a href="">a3</a>
+        <label for="">l3</label>
+        <a href="">a4</a>
+        <label for="">l4</label>
+        <a href="">a5</a>
+        <label for="">l5</label>
+    </div>
+    <div></div>
+    
+</body>
+</html>

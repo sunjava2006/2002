@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择符</title>
+</head>
+    <style>
+        input[name="myName"]{
+            border: red dashed 2px;
+        }
+        input[disabled]{
+            background: sandybrown;
+        }
+        input[name]{
+            box-shadow: gray 5px 5px 5px;
+        }
+        input[name ~= 'age']{
+            background-color: seagreen;
+        }
+    </style>
+<body>
+    <input type="text" name="myName" disabled>
+    <input type="text" name="age old" >
+    <input type="checkbox" name="interesting" checked disabled>
+</body>
+</html>
