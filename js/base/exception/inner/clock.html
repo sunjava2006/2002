@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+            margin: 0;
+        }
+       .page{
+           width: 800px;
+           height: 1800px;
+           background-color: cornsilk;
+           margin: auto;
+           position: relative;
+           top: 50px;
+       }
+       #clock{
+           position: fixed;
+           top: 0;
+       }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div  id="clock">
+           
+        </div>
+        <button onclick="stop();"> stop</button>
+    </div>
+    
+    <script>
+
+        function a(){
+            var now = new Date();
+            var d = now.getFullYear()+"年"+now.getMonth()+"月"+now.getDate()+"日";
+            var t = now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+            var time = d + "&nbsp;" + t;
+            var div = document.getElementById("clock");
+            div.innerHTML = time;
+        }
+       
+
+        var id =  window.setInterval(a, 1000);
+
+        function stop(){
+            window.clearInterval(id);
+        }
+       
+
+    </script>
+</body>
+</html>

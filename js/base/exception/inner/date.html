@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+    <script>
+
+        let now = new Date();
+        console.log(now);
+        
+        let birthdate = new Date(2009, 4, 31, 7, 20); 
+        let days = ["日","一", "二", "三", "四", "五", "六"]
+        with(birthdate){
+            s = getFullYear()+"年"+(getMonth()+1)+"月"+getDate()+"日 "+getHours()+":"+getMinutes()+" 星期"+days[getDay()];
+        }
+
+        console.log(s);
+       
+      
+    </script>
+    </pre>
+</body>
+</html>
