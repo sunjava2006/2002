@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 什么是对象。从数据的角度说，是一个复杂数据（这个数据有多个值构成）。
+           对象：从客观世界来说，一个对象就对应世界中一个具体的事物。
+           在计算机世界中，是开避一个内存空间，存储一个描述对应的事物的数据。
+           即对应的一个事物的数据模型。（虚拟现实）。
+           对应的事件的功能、行为在对象中用方法来表示。方法从根本上来说，就是一个函数。
+        */
+
+        
+        // 创建对象的方式1， 从Object直接创建。
+        var p = new Object();
+        p.name = "李新";
+        p.age = 20;
+        p.gender = "男"; 
+        p.run = function(){
+            console.log(this.name + "running....");
+        };
+        p.sing = function(word){
+            console.log(this.name+" sing" + word);
+        }
+
+
+
+        // 创建对象的方式2, JSON。对象表示法。
+        var p2 = {name:"李小林", 
+                  age:30, 
+                  gender:"男", 
+                  run:function(){
+                    console.log(this.name + "running....");
+                  },
+                  sing:function(word){
+                       console.log(this.name+" sing" + word);
+                  } };
+
+        // 创建对象的方式3, 定义一个类型（类）。通过构造函数。
+        function People(name, age, gender){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+        People.prototype.run=function(){
+            console.log(this.name+"跑步.");
+        }
+        People.prototype.sing=function(word){
+            console.log(this.name+ "唱"+word);
+        }
+        People.prototype.country="China";
+
+        var p3 = new People("wang", 20, "male"); // new有两个作用：1、是创建对象。2、将this指向创建的对象。
+        
+
+    </script>
+</body>
+</html>

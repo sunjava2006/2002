@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 产生一个0-10之间的随机数。（含0、10）
+        var ran = Math.round(Math.random()*10);
+        var msg = ""
+        switch(true){
+            case ran<=3:
+                msg="x&lt;=3";
+                break;
+            case ran>3 && ran<=6:
+                msg = "3&lt;x&le;6";
+                break;
+            default:
+                msg = "8-10";
+                break;
+            case ran>6 && ran<=8:
+                msg = "6&lt;x&le;8";
+                break;
+           
+        }
+
+        document.write(ran+":"+msg);
+
+        switch(ran){
+            default:
+                document.write("other");
+            // case 0:
+            //     document.write("zero");
+            //     // break;
+            // case 1:
+            //     document.write('one');
+            //     // break;
+            
+        }
+
+        if(true){
+            
+        }
+        else{
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+            score = Math.round(Math.random()*100);
+            grade = "";
+            if(score>=90){
+                grade = "优";
+            }else if(score >= 80){
+                grade = "良";
+            }else if(score >= 70){
+                grade = "中";
+            }else if (score >= 60){
+                grade="及格";
+            }else{
+                grade = "差";
+            }
+
+            document.write("成绩为"+score+"分，等级："+grade);
+
+    </script>
+</body>
+</html>
