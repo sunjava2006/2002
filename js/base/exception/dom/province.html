@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="init();">
+    <select name="province" id="province" onchange="loadCities(this.value);">
+    </select>
+    <select name="city" id="city"></select>
+
+    <script>
+        var provinces = [{name:"江苏", value:"JiangSu"},{name:"安徽", value:"AnHui"}];
+
+        var cities = {
+                        JiangSu:[{name:"南京", value:"NanJing"},
+                                 {name:"镇江", value:"ZhenJiang"},
+                                 {name:"苏州", value:"SuZhou"}],
+                        AnHui:[{name:"合肥", value:"HeFei"},
+                               {name:"芜湖", value:"WuHu"},
+                               {name:"马鞍山", value:"MaAnShan"}]
+
+        }
+
+        function init(){
+            var provinceEle = document.querySelector("#province"); // 获取id=provice的select元素
+            for(var i in provinces){
+                var province = provinces[i];
+                var optEle = document.createElement("option"); // 创建元素。（option）
+                optEle.setAttribute("value", province.value);  // 为元素设置属性。
+                var txt = document.createTextNode(province.name); // 创建文本节点
+                optEle.appendChild(txt)// 添加子节点
+
+                provinceEle.appendChild(optEle);
+            }
+
+            // 动态事件绑定
+            // provinceEle.addEventListener();
+
+            loadCities("JiangSu")
+        }
+
+        function loadCities(provinceValue){
+            console.log(provinceValue)
+            var cityList = cities[provinceValue];
+            var cityEle = document.querySelector("#city");
+            // 删除cityEle这个Select下面的子元素。
+            // childList = cityEle.children; // 获取当前元素的子元素列表。
+            // for(var i=childList.length-1; i>=0; i--){
+            //     var child = childList[i];
+            //     cityEle.removeChild(child); // 删除子元素
+            // }
+
+            while(cityEle.hasChildNodes()){
+                var e = cityEle.lastChild; // .firstChild取第一个子元素。lastChild是取最后一个子元素
+                cityEle.removeChild(e); // 删除子元素
+            }
+           
+
+            for(var i of cityList){
+                var optEle = document.createElement("option"); // 创建元素
+                optEle.value = i.value; // 设置属性
+                optEle.innerText = i.name; // 添加子文本
+
+                cityEle.appendChild(optEle); // 添加子元素
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>

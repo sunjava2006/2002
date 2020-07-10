@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="#" id="form1">
+         <table>
+             <tr>
+                 <td>用户名</td>
+                 <td><input type="text" name="userName" id="userName" placeholder="以字符开头，长度3个以上"></td>
+                 <td><label id="userNameMsg"></label></td>
+             </tr>
+             <tr>
+                 <td>密码</td>
+                 <td><input type="text" name="passwd" id="passwd" title="6-8位字母与数字的组合，必须有大小写"></td>
+                 <td><label id="pwdMsg"></label></td>
+             </tr>
+             <tr>
+                 <td>email</td>
+                 <td><input type="text" name="email" id="email"></td>
+                 <td><label id="emailMsg"></label></td>
+             </tr>
+             <tr>
+                 <td>手机号</td>
+                 <td><input type="text" name="mobile"></td>
+                 <td><label id="mobileMsg"></label></td>
+             </tr>
+             <tr>
+                 <td>固话号</td>
+                 <td><input type="text" name="phone"></td>
+                 <td><label id="phoneMsg"></label></td>
+             </tr>
+             <tr>
+                 <td><input type="reset" value="重置"></td>
+                 <td><input type="submit" value="注册" onclick="return regist();"></td>
+             </tr>
+         </table>
+
+
+    </form>
+
+    <script>
+        function regist(){
+            // 找到所有的label
+            var labels = document.querySelectorAll("#form1 label");
+            console.log(labels);
+            for(var i=0;i<labels.length;i++){
+                labels[i].innerHTML="";
+            }
+
+            var ok = true;
+            // 校验用户名
+            var nameReg = /^[a-zA-Z][a-zA-Z0-9]{2,}$/;       // {n}重复n次, {n,m}重复n-m次, {n, }重复n次以上 , + 一次以上 , ? 没有或一次, * 没有或多次。
+            var name = document.getElementById("userName").value;  // 根据ID获取页面元素，并取值。
+            if(!nameReg.test(name)){
+                ok = false;
+                var userNaemMsg = document.getElementById("userNameMsg");
+                userNaemMsg.innerHTML="用户名格式不正确";           //  为元素内部添加html内容。
+            }
+
+            // 校验密码
+            var pwdReg = /[a-z]+[A-Z]+[0-9]+/;  // 字符串的有一个以上指定内容
+            var pwdLenReg = /^.{6,8}$/;     // 任意字符6-8位。
+            var pwd = document.querySelector("#passwd").value;
+            var pwdMsg = document.querySelector("#pwdMsg");
+            if(pwdLenReg.test(pwd)){
+                if(!pwdReg.test(pwd)){
+                    ok = false;
+                    pwdMsg.innerHTML = "格式不正确。";
+                }
+            }else{
+                ok = false;
+                pwdMsg.innerHTML="密码长度不足6-8位。";
+            }
+
+            // 校验email
+            var mailReg = /^\w{3,}@[a-z0-9_]+\.(edu|com|cn|org|gov)$/;
+            var email = document.querySelector("#email").value;
+            var emailMsg = document.querySelector("#emailMsg");
+            if(!mailReg.test(email)){
+                ok = false;
+                emailMsg.innerHTML = "邮箱格式不正确";
+            }
+
+            // 校验手机号
+            var mobileReg = /^(139|138|151|152|133|130|189|188|177)\d{8}$/;
+            var mobile = document.querySelector("input[name='mobile']").value;
+            var mobileMsg = document.querySelector("#mobileMsg");
+            if(!mobileReg.test(mobile)){
+                ok = false;
+                mobileMsg.innerHTML = "手机号不正确";
+            }
+
+            // 校验固话
+            var phoneReg = /^\d{3,4}-?\d{8}$/;
+            var phone = document.querySelector("input[name='phone']").value.trim();
+            var phoneMsg = document.querySelector("#phoneMsg");
+            if(!phoneReg.test(phone)){
+                ok = false;
+                phoneMsg.innerHTML = "固话不正确。";
+            }
+            return ok;
+        }
+    </script>
+</body>
+</html>
