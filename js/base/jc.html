@@ -6,6 +6,9 @@
     <title>Document</title>
 </head>
 <body>
+
+    <a href="http://www.sina.com.cn">sina</a>
+    <button>click</button>
     <script>
         // 求一个数的阶乘(5*4*3*2*1)
        v= (function (n){
@@ -16,7 +19,21 @@
         })(5);
         document.write(v);
 
+        var btn = document.querySelector("button");
+        btn.onclick=function(){
+            alert("clik me.");
+            this.onclick=null;
+        };
         
+        var a = document.querySelector("a");
+        a.addEventListener("click", evt=>{
+            alert();
+            console.log(evt.defaultPrevented)
+            evt.preventDefault();
+            // evt.defaultPrevented = true;
+            console.log(evt.defaultPrevented)
+        }, false);
+
     </script>
 </body>
 </html>

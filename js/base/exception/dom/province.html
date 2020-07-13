@@ -38,7 +38,11 @@
             // 动态事件绑定
             // provinceEle.addEventListener();
 
-            loadCities("JiangSu")
+            // loadCities("JiangSu")
+
+            // 创建事件，并触发。
+            var evt = new Event("change");
+            provinceEle.dispatchEvent(evt);
         }
 
         function loadCities(provinceValue){

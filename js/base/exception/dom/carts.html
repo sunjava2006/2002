@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function init(){
+            // 为全选按钮添加事件
+            var btnAll = document.querySelector('#btnAll');
+            btnAll.addEventListener('click', evt=>{
+                var cks = document.querySelectorAll("input[type=checkbox]");
+                console.log(cks);
+                for(var i=0;i<cks.length;i++){
+                    cks.item(i).checked = true;
+                }
+            });
+
+            // 为反选按钮添加事件
+            var btnRev = document.querySelector("#btnRev");
+            btnRev.addEventListener('click', evt=>{
+                var cks = document.querySelectorAll("input[type=checkbox]");
+                for(var i=0;i<cks.length;i++){
+                    cks[i].checked = !cks[i].checked;
+                }
+            });
+
+            // 为删除按钮添加事件
+            var btnDel = document.querySelector("#btnDel");
+            btnDel.addEventListener('click', evt=>{
+                var cks = document.querySelectorAll("input[type=checkbox]");
+                for(var i=0;i<cks.length;i++){
+                    if(cks[i].checked){
+                        var tr = cks[i].parentElement.parentNode;
+                        console.log(tr.tagName);
+                        console.log(tr.parentNode);
+                        tr.parentNode.removeChild(tr);
+                    }
+                }
+            });
+
+            // 为添加按钮添加事件
+            var btnAdd = document.querySelector("#btnAdd");
+            btnAdd.addEventListener('click', evt=>{
+                var name = window.prompt("输入一个商品", "牙刷");
+                if(name){
+                    var last = document.querySelector("table tr:last-child");
+                    // console.log(last);
+                    var tr = document.createElement("tr");
+                    var td1 = document.createElement("rd");
+                    var txt = document.createTextNode(name);
+                    var td2 = document.createElement('td');
+                    var chx = document.createElement("input");
+                    chx.setAttribute("type","checkbox");
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+                    td1.appendChild(txt);
+                    td2.appendChild(chx);
+
+                    last.parentNode.insertBefore(tr, last); // 插入节点
+
+                }
+            });
+            
+        }
+
+    </script>
+</head>
+<body onload="init();">
+    
+    <table>
+        <tr>
+            <td>中华绘图铅笔</td>
+            <td><input type="checkbox" name="" id=""></td>
+        </tr>
+        <tr>
+            <td>凌美钢笔</td>
+            <td><input type="checkbox" name="" id=""></td>
+        </tr>
+        <tr>
+            <td>马利绘图橡皮</td>
+            <td><input type="checkbox" name="" id=""></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button id="btnAll">全选</button>
+                <button id="btnRev">反选</button>
+                <button id="btnDel">删除</button>
+                <button id="btnAdd">添加</button>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>

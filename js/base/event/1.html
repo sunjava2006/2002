@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="init();">
+    <form action="#" id="form1">
+        <input type="hidden" name="interesting" value="reading">
+        
+    </form>
+    
+
+    <button type="button" id="btn1">confirm</button>
+
+    <script>
+        function init(){
+            var btn = document.querySelector("#btn1");
+            btn.addEventListener("click", 
+                                 evt => {console.log("========================");
+                                    console.log(evt.currentTarget);
+                                    console.log(evt.target);
+                                    // evt.cancelBubble(true);
+                                    evt.stopPropagation();
+                                 }, 
+                                false); // 事件类型， 执行的方法， 是否在捕获区处理。
+
+            document.addEventListener("click", 
+                                    function(evt){console.log("-----------------");
+                                       
+                                         console.log(evt.currentTarget);
+                                         console.log(evt.target);
+                                        //  evt.currentTarget.removeEventListener("click", arguments.callee, true)
+                                        // evt.stopPropagation();
+                                       
+                                        
+                                        }, 
+                                    false );
+        }
+
+
+
+        function send(){
+            var form = document.getElementById('form1');
+            form.submit(); // 调用form自己的submit()发送表单。
+        }
+    </script>
+</body>
+</html>
