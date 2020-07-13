@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="location.reload(true)">刷新</button>
+    <button onclick="location.replace('http://www.sina.com.cn')">sina</button>
+    <pre>
+    <script>
+        var protocal = window.location.protocol;
+        document.writeln("协议：" + protocal);
+
+        var hostName = location.hostname;
+        document.writeln("主机名:"+hostName);
+
+        var port = location.port;
+        document.writeln("端口：" + port);
+
+        var path = location.pathname;
+        document.writeln("路径：" + path);
+
+        var query = location.search;
+        document.writeln("参数:" + query);
+
+        document.writeln("锚点:" + location.hash)
+
+    </script>
+    </pre>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="3.html?userName=wang">3.html</a>
+    <h1>1.html</h1>
+    <button onclick="open1();">打开新浪</button>
+
+    <script>
+        function open1(){
+            var winid =  open('http://www.iqiyi.com', "_blank");
+            console.log(winid);
+
+            window.setTimeout(()=>{winid.close()}, 1000)
+            
+        }
+    </script>
+</body>

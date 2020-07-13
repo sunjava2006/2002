@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+        <ul style="width: 200px;float:left;">
+            <li>小张<input type="checkbox" name="" id=""></li>
+            <li>小李<input type="checkbox" name="" id=""></li>
+            <li>小王<input type="checkbox" name="" id=""></li>
+            <li>小黄<input type="checkbox" name="" id=""></li>
+            <li>小欧<input type="checkbox" name="" id=""></li>
+        </ul>
+        <div style="width: 200px;float:left; margin-top: 50px;">
+            <button>&uarr;</button><br>
+            <button>&darr;</button>
+        </div>
+    </div>
+   
+    <script>
+        var last = document.querySelector("li:last-child");
+        console.log(last);
+        var previous = last.previousElementSibling;
+        console.log(previous);
+        var next = previous.nextElementSibling;
+        console.log(next);
+
+    </script>
+</body>
+</html>
