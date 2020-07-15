@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eye眼科登录</title>
+    <style>
+        body{
+            background:gray;
+        }
+        .page{
+            width:500px;
+            background: white;
+            margin:auto;
+            border-radius: 15px;
+        }
+        table{
+            width:400px;
+            margin:auto;
+        }
+
+    </style>
+</head>
+<body>
+<div class="page">
+    <form action="/login" method="post">
+        <table>
+            <caption>登录</caption>
+            <tr>
+                <td>登录名</td>
+                <td><input type="text" name="loginName"></td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td><input type="text" name="pwd"></td>
+            </tr>
+            <tr>
+                <td>验证码</td>
+                <td><input type="text" name="validate"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:right">
+                    <input type="submit" value="登录">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
