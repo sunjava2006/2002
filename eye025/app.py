@@ -19,7 +19,8 @@ def check_login():
         if not (curr_path == '/'
                 or curr_path == '/login'
                 or curr_path== '/favicon.ico'
-                or curr_path.startswith("/static")):
+                or curr_path.startswith("/static")
+                or curr_path.startswith("/app/")):
             return redirect('/')
 
     else:
@@ -61,7 +62,8 @@ def login():
         # 登录
         user = user_service.login(loginName, pwd)
         if not user:
-            return render_template("login.html", msg="用户名或密码错误")
+            create_code()
+            return render_template("login.html", msg="用户名或密码错误",code=session['code'])
         else:
             # return redirect("/index")
             session["user_info"] = user
@@ -111,6 +113,19 @@ def publishad():
     return render_template("ad.html", msg=msg, adList=ad_list)
 
 
+
+#================================================================
+@app.route("/app/getad")
+def app_getad():
+    data = ad_service.list_all()
+    for i in data:
+        i["ad_img"]="http://wangrui.free.idcfengye.com/static/"+i["ad_img"]
+    return jsonify(data)
+
+
+
+
+#=================================================================
 
 
 if __name__ == '__main__':

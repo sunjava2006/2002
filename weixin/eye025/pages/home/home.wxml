@@ -1,0 +1,8 @@
+<swiper class="ad-swiper" autoplay="true" indicator-dots="true" interval="2000" duration="500" circular="true">
+   <block wx:for="{{adList}}">
+        <swiper-item>
+           <image src="{{item.ad_img}}"></image>
+        </swiper-item>
+
+   </block>
+</swiper>

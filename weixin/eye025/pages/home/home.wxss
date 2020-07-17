@@ -1,0 +1,10 @@
+.ad-swiper{
+    background: yellow;
+    height: 30vh;
+    width: 100vw;
+}
+
+.ad-swiper image{
+    height: 30vh;
+    width: 100vw;
+}
