@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .page{
+            width:800px;
+            margin:auto;
+        }
+        .list,.upload{
+             width:800px;
+             border-collapse:collapse;
+             border:solid gray 2px;
+        }
+        td{
+       /*border:solid gray 1px;*/
+        }
+        .ad-img{
+        width:200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div>
+            <form action="/publishad" method="post" enctype="multipart/form-data">
+                <table class="upload">
+                    <tr>
+                        <td>标题</td>
+                        <td><input type="text" name="ad_name" ></td>
+                    </tr>
+                     <tr>
+                        <td>选择广告图片</td>
+                        <td><input type="file" name="ad" ></td>
+                    </tr>
+                     <tr>
+                        <td>广告内容</td>
+                        <td><textarea name="ad_desc"  cols="90" rows="20"></textarea></td>
+                    </tr>
+
+
+                    <tr>
+
+                        <td colspan="2" style="text-align:right">
+                            {{msg}}
+                            <input type="submit" value="发布">
+                        </td>
+                    </tr>
+                </table>
+
+
+            </form>
+
+        </div>
+        <div>
+            <table class="list">
+                <tr>
+                    <th>名称</th>
+                    <th>图片</th>
+                    <th>详情</th>
+                    <th></th>
+                </tr>
+                {% for i in adList%}
+                <tr>
+                    <td>{{i["ad_title"]}}</td>
+                    <td><img class="ad-img" src="/static/{{i['ad_img']}}"  </td>
+                    <td>{{i['ad_desc']}}</td>
+                    <td>
+                        <a href="/del_ad?id={{i['id']}}">删除</a>
+                    </td>
+                </tr>
+                {% endfor%}
+            </table>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
