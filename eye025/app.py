@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, g, current_app, session, redirect
+from flask import Flask, render_template, request, jsonify, g, current_app, session, redirect, make_response
 from service import user_service, ad_service
 import random
 import os
@@ -11,10 +11,20 @@ app.config["SECRET_KEY"] = b'1234'
 
 @app.before_request
 def check_login():
+    print(request.headers)
+    print(request.headers.get("User-Agent"))
     curr_path = request.path
     print("curr_path:", curr_path)
     o = session.get("user_info")
     if not o:
+        loginName = request.cookies.get("loginName") # 从request中取得cookie数据
+        pwd = request.cookies.get('pwd')
+        if loginName and pwd:
+            user = user_service.login(loginName, pwd)
+            if user:
+                session['user_info'] = user
+                return "", 302,{'location':'/index'}
+
         print('没登录 ------------------------------')
         if not (curr_path == '/'
                 or curr_path == '/login'
@@ -63,12 +73,17 @@ def login():
         user = user_service.login(loginName, pwd)
         if not user:
             create_code()
-            return render_template("login.html", msg="用户名或密码错误",code=session['code'])
+            template =  render_template("login.html", msg="用户名或密码错误",code=session['code'])
+            return make_response(template)
         else:
             # return redirect("/index")
             session["user_info"] = user
-            return ("", 302, {"location":"/index"})
-
+            # return ("", 302, {"location":"/index"})
+            response = make_response("", 302, {"location":"/index"})
+            if request.values.get("autoLogin"): # 是否10天免登录
+                response.set_cookie("loginName", loginName, max_age=10*24*3600)
+                response.set_cookie("pwd", pwd, max_age=10*24*3600)
+            return response
 
 @app.route("/index")
 def index_page():
@@ -80,7 +95,10 @@ def index_page():
 def logout():
     '''退出登录，将session中用户信息清除，并返回登录页面。'''
     del session['user_info']
-    return redirect("/")
+    response = make_response("",302,{"location":"/"})
+    response.set_cookie("loginName",'',0)
+    response.set_cookie("pwd", '', 0)
+    return response
 
 @app.route('/ad')
 def adpage():
@@ -112,6 +130,20 @@ def publishad():
         msg = "发布失败"
     return render_template("ad.html", msg=msg, adList=ad_list)
 
+@app.route("/modify_pwd")
+def modify_page():
+    return render_template("modify_pwd.html")
+
+
+@app.route("/oldPwdValidate", methods=["post"])
+def validateOldPwd():
+    old = request.values.get("oldpwd")
+    id = session.get("user_info").get("id")
+    u = user_service.validatePwd(old, id)
+    result = {"result":"nook"}
+    if u:
+        result = {"result": "ok"}
+    return jsonify(result)
 
 
 #================================================================
@@ -120,7 +152,7 @@ def app_getad():
     data = ad_service.list_all()
     for i in data:
         i["ad_img"]="http://wangrui.free.idcfengye.com/static/"+i["ad_img"]
-    return jsonify(data)
+    return jsonify(data),{'Access-Control-Allow-Origin':'http://127.0.0.1:5500'}
 
 
 

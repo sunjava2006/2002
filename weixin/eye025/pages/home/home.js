@@ -21,7 +21,8 @@ Page({
                     adList:data.data
                 });
             }
-        })
+        });
+        
     },
 
     /**

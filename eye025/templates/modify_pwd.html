@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table{
+            width:500px;
+            margin:auto;
+            border: solid black 2px;
+        }
+        .red{
+            color: red;
+        }
+        .green{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td>输入旧密码</td>
+        <td id="oldTd"><input type="text" id="old" onblur="validateOld(this.value)">
+           <label id="oldLbl"></label>
+        </td>
+    </tr>
+    <tr>
+        <td>输入新密码</td>
+        <td><input type="text" id="new1"></td>
+    </tr>
+    <tr>
+        <td>确认新密码</td>
+        <td><input type="text" id=""new2></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><button type="button">修改</button></td>
+    </tr>
+</table>
+
+<script>
+    oldOk = false;
+
+    function validateOld(val){
+        // Asynchronous Javascript And XML
+        // 异步请求对象
+        xmlReq = new XMLHttpRequest() 
+
+        xmlReq.onreadystatechange=function(){
+            console.log("readyState:"+xmlReq.readyState)
+            if(xmlReq.readyState==4 && xmlReq.status==200){
+                data = xmlReq.responseText;
+                data = eval("("+data+")")
+                // alert(data.result);
+                clas = "green"
+                msg = "校验通过"
+                if(data.result=='ok'){
+                    oldOk = true
+                }
+                else{
+                    oldOk = false;
+                    clas = "red";
+                    msg = "密码错误"
+                }
+
+                oldlbl = document.querySelector('#oldLbl')
+              
+                oldlbl.setAttribute("class", clas )
+               
+                oldlbl.innerText=msg;
+            }
+        }
+
+        xmlReq.open("post","http://127.0.0.1:5000/oldPwdValidate")
+        xmlReq.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xmlReq.send("oldpwd="+val);
+
+    }
+
+</script>
+</body>
+</html>
