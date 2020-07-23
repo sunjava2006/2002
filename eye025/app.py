@@ -73,7 +73,7 @@ def login():
         user = user_service.login(loginName, pwd)
         if not user:
             create_code()
-            template =  render_template("login.html", msg="用户名或密码错误",code=session['code'])
+            template = render_template("login.html", msg="用户名或密码错误",code=session['code'])
             return make_response(template)
         else:
             # return redirect("/index")
@@ -145,6 +145,16 @@ def validateOldPwd():
         result = {"result": "ok"}
     return jsonify(result)
 
+@app.route("/modify", methods=["POST"])
+def modify():
+    newPWD = request.values.get("newPWD")
+    count = 0
+    id = session.get('user_info').get("id")
+    count = user_service.modifyPwd(newPWD,id)
+    if count:
+        return "ok"
+    else:
+        return "no"
 
 #================================================================
 @app.route("/app/getad")

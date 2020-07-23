@@ -11,6 +11,10 @@ def validatePwd(pwd, id):
     return db_template.select_one(sql, pwd, id)
 
 
+def modifyPwd(newPWD, id):
+    sql = "update t_users set passwd=md5(%s) where id=%s"
+    return db_template.save_or_update(sql, newPWD, id)
+
 if __name__ == '__main__':
     d = login('000001', '123456')
     print(d)

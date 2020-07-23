@@ -31,11 +31,11 @@
     </tr>
     <tr>
         <td>确认新密码</td>
-        <td><input type="text" id=""new2></td>
+        <td><input type="text" id="new2"></td>
     </tr>
     <tr>
         <td></td>
-        <td><button type="button">修改</button></td>
+        <td><button type="button" onclick="modify();">修改</button></td>
     </tr>
 </table>
 
@@ -76,6 +76,34 @@
         xmlReq.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xmlReq.send("oldpwd="+val);
 
+    }
+
+    function modify(){
+        if(oldOk){
+            new1 = document.querySelector('#new1').value;
+            new2 = document.querySelector('#new2').value;
+            if(new1==new2){
+                var xmlReq = new XMLHttpRequest();
+                xmlReq.onreadystatechange=function(){
+                    if(xmlReq.readyState==4 && xmlReq.status==200){
+                        data = xmlReq.responseText;
+                        if(data=="ok"){
+                            window.open('/', 'top');
+                        }else{
+                            alert("修改失败")
+                        }
+                    }
+                };
+                xmlReq.open("POST", "/modify");
+                xmlReq.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+                xmlReq.send("newPWD="+new1);
+            }else{
+                alert('两次输入的密码不一致。');
+            }
+        }
+        else{
+            alert("必须通过原始密码的校验。");
+        }
     }
 
 </script>
