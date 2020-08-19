@@ -10,7 +10,7 @@ package com.thzhima.advance.util;
  * @date 2020-8-4
  * 
  */
-public interface MyCollection<E> {
+public interface MyCollection<E> extends Iterable<E>{
 
 	/**
 	  *  向集合中添加元素

@@ -1,5 +1,7 @@
 package com.thzhima.advance.util;
 
+import java.util.ListIterator;
+
 /**
   *  列表接口，有个有序的数据集合。可以无限制的向这个集合中添加数据元素。
   *  添加的数据元素有序排列。
@@ -31,5 +33,8 @@ public interface MyList<E> extends MyCollection<E>{
 	 * @return 成功删除返回true,否则返回false。
 	 */
 	boolean remove(int idx);
+	
+//	ListIterator<E> listIterator();
+	
 
 }
