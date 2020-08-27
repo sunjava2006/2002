@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04972d10-8fc6-41ca-a1d9-9680b3e71e44" name="Default Changelist" comment="" />
+    <list default="true" id="04972d10-8fc6-41ca-a1d9-9680b3e71e44" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../java/java_base/java_advance/bin/com/thzhima/advance/util/MyLinkedBlockingQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java/java_base/java_advance/bin/com/thzhima/advance/util/MyLinkedBlockingQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java/java_base/java_advance/src/com/thzhima/advance/util/MyLinkedBlockingQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java/java_base/java_advance/src/com/thzhima/advance/util/MyLinkedBlockingQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../js/base/tostring.html" beforeDir="false" afterPath="$PROJECT_DIR$/../js/base/tostring.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +48,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../python_base" />
   </component>
   <component name="RunManager" selected="Python.print_tank">
     <configuration name="comment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -165,10 +170,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="752" y="234" key="FileChooserDialogImpl" timestamp="1591882900692">
-      <screen x="0" y="0" width="2048" height="1112" />
+    <state x="940" y="295" key="FileChooserDialogImpl" timestamp="1598491836581">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="752" y="234" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1591882900692" />
+    <state x="940" y="295" key="FileChooserDialogImpl/0.0.2560.1400@0.0.2560.1400" timestamp="1598491836581" />
     <state width="2022" height="179" key="GridCell.Tab.0.bottom" timestamp="1591801692739">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

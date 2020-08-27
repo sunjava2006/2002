@@ -1,5 +1,9 @@
 package com.thzhima.advance.util;
 
+import java.util.Arrays;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
+
 public class MyLinkedBlockingQueue<E> extends MyAbstractLinkedBlockingQueue<E>{
 	
 	private int capacity;// 队列的长度。
@@ -68,39 +72,125 @@ public class MyLinkedBlockingQueue<E> extends MyAbstractLinkedBlockingQueue<E>{
 		return (E) this.first.value;
 	}
 	
-	public static void main(String[] args) {
-		MyLinkedBlockingQueue<String> lbq = new MyLinkedBlockingQueue<>(6);
+	
+	
+	
+	/**
+	 *阻塞的添加方法，当链表中没有空间时，阻塞。直到通知有空间为止。
+	 */
+	@Override
+	public void put(E e) throws InterruptedException {
+		synchronized (this) {
+			if(this.size==this.capacity) {
+				
+					this.wait();
+					this.offer(e);
+					
+				
+			}else {
+				this.offer(e);
+			}
+		    this.notifyAll();
+		}
+	}
+	
+	
+
+	@Override
+	public E take() throws InterruptedException {
+		E e = null;
+		synchronized (this) {
+			if(this.size()==0) {
+				this.wait();
+				e = this.peek();
+				
+			}else {
+				e = this.poll();
+			}
+			this.notifyAll();
+		}
+		return e;
+	}
+	
+	
+
+	@Override
+	public boolean offer(E e, long time, TimeUnit unit) throws InterruptedException {
+		boolean ok = false;
+		synchronized (this) {
+			if(this.size==this.capacity) {
+				long timeout = time;
+				if(TimeUnit.SECONDS==unit) {
+					timeout = time*1000;
+				}
+				this.wait(timeout);
+				if(this.size<this.capacity) {
+					this.offer(e);
+					ok = true;
+				}
+			}else {
+				this.offer(e);
+				ok = true;
+			}
+			this.notifyAll();
+		}
+		return ok;
+	}
+
+	@Override
+	public E poll(long time, TimeUnit unit) throws InterruptedException {
+		E e = null;
+		synchronized (this) {
+			if(this.size>0) {
+				e = this.poll();
+			}
+			else {
+				long timeout = time;
+				if(unit==TimeUnit.SECONDS) {
+					timeout = time*1000;
+				}
+				this.wait(timeout);
+				if(this.size>0) {
+					e = this.poll();
+				}
+			}
+			this.notifyAll();
+		}
+		return e;
+	}
+
+	public static void main(String[] args)   {
+		MyLinkedBlockingQueue<String> lbq = new MyLinkedBlockingQueue<>(3);
+	
 		
-		System.out.println(lbq.offer("a"));
-		System.out.println(lbq.offer("b"));
-		System.out.println(lbq.offer("c"));
-		System.out.println(lbq.offer("d"));
-		System.out.println(lbq.offer("e"));
-		System.out.println(lbq.offer("f"));
-		System.out.println(lbq.offer("g"));
 		
-		System.out.println(lbq.size());
-		
-		System.out.println(lbq.peek());
-		System.out.println(lbq.peek());
-		System.out.println(lbq.peek());
-		System.out.println(lbq.size());
-		
-		System.out.println("----------------------------------");
-		System.out.println(lbq.poll());
-		System.out.println(lbq.size());
-		System.out.println(lbq.poll());
-		System.out.println(lbq.size());
-		System.out.println(lbq.poll());
-		System.out.println(lbq.size());
-		System.out.println(lbq.poll());
-		System.out.println(lbq.size());
-		System.out.println(lbq.poll());
-		System.out.println(lbq.size());
-		System.out.println(lbq.poll());
-		System.out.println(lbq.size());
-		System.out.println(lbq.poll());
-		System.out.println(lbq.size());
+		try {
+			lbq.offer("a", 100, TimeUnit.MICROSECONDS);
+			lbq.offer("b", 100, TimeUnit.MICROSECONDS);
+			lbq.offer("c", 100, TimeUnit.MICROSECONDS);
+			
+			Thread t = new Thread(()->{
+				try {
+					Thread.sleep(50);
+					String e = lbq.poll(100, TimeUnit.MICROSECONDS);
+					System.out.println("take:" + e);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			});
+			t.start();
+			
+			lbq.offer("d", 100, TimeUnit.MICROSECONDS);
+			
+			t.join();
+			
+			Thread.sleep(1000);
+			
+			System.out.println(lbq.size());
+			System.out.println(Arrays.toString(lbq.toArray()));
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 		
 	}
 	

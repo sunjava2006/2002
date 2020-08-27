@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery_js/jquery.js"></script>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border: solid red 2px;
+        }
+
+        div:first-child{
+            display: none;
+            /* visibility: hidden; */
+        }
+    </style>
+    <script>
+        $(function(){
+            // $(':visible').hide(3000);
+            // $(':hidden').show(3000);
+            $('td:contains(-)').css('color','red');
+            $('td:empty').html('/');
+            $('tr:nth-child(3n+1)').css('background','yellow');
+            // $(':disabled').prop('disabled',false);
+        });
+
+    </script>
+</head>
+<body>
+    <div>a</div>
+    <div>b</div>
+
+    <table border="1">
+        <tr>
+            <td>月份</td>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>南京</td>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>镇江</td>
+            <td></td>
+            <td>-1</td>
+        </tr>
+        <tr>
+            <td>常州</td>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>苏州</td>
+            <td></td>
+            <td>-1</td>
+        </tr>
+        <tr>
+            <td>无锡</td>
+            <td>2</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>扬州</td>
+            <td></td>
+            <td>-1</td>
+        </tr>
+    </table>
+    <input type="text" disabled>attribute  properties
+</body>
+</html>

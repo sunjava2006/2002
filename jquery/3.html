@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery_js/jquery.js"></script>
+    <script>
+        $(function(){
+            $('#btn_all').click(function(e){
+                $(':checkbox').prop('checked',true);
+            });
+
+            $('#btn_null').click((e)=>{
+                console.log(e);
+                $(':checked').prop('checked',false);
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <input type="checkbox" name="" id="">a
+    <input type="checkbox" name="" id="">b
+    <input type="checkbox" name="" id="">c
+
+    <button id="btn_all">全选</button>
+    <button id="btn_null">全不选</button>
+</body>
+</html>

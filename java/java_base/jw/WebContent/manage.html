@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教务管理</title>
+    <script src="js/bower_components/jquery/dist/jquery.js"></script>
+	<script src="js/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+	<link rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+<body style="background: white;">
+    
+    <!-- <div class="container"> -->
+        
+        <div class="row">
+            <div style="background: skyblue; height: 100px;">
+               XXX 教务管理系统
+            </div>
+        </div>
+        
+        <div class="row " style="height: 1000px;margin-top:1px;">
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 bg-success " style=" height: 1000px; padding-right: 0;">
+                <ul class="nav nav-pills nav-stacked" id="nav_menu" style="margin-top:0px;width: 100%;">
+                    <li class="active"><a href="class.jsp" target="main_frame">班级管理</a></li>
+                    <li><a href="http://www.qq.com" target="main_frame">学生管理</a></li>
+                    <li><a href="#" target="main_frame">Opus</a></li>
+                    <li><a href="#" >Book</a></li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10" style="background: white;">
+                <iframe name="main_frame" src="class.jsp" frameborder="0"  style="height: 1000px;width: 100%;"></iframe>
+            </div>
+        </div>
+        
+    <!-- </div> -->
+    
+</body>
+<script>
+    //  $().ready(function(){
+
+    //  });
+
+     $(function(){
+        $('#nav_menu li').click(function(e){
+            $('#nav_menu li').removeClass('active');
+            console.log(this);
+            $(this).addClass('active');
+        });
+     });
+
+
+</script>
+
+</html>

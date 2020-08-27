@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery_js/jquery.js"></script>
+    <title>Document</title>
+    <script>
+        $().ready(function(){
+            var v = $('input').val('hello').val();   // 除了取值的方法外， 所有的方法都返回自己，从而可以连着".xxx()"。“链式语法”。
+            console.log(v);
+
+            $('p').hide(3000);
+
+            var div1 = document.querySelector('#div1'); // 原生javascript对象
+            var d = $(div1).css('color',"red");  // $(原生对象) =>> JQuery对象
+            console.log(d[0]); // JQuery对象[0] =>> 原生对象
+
+            $('ul>li').css("color","green");
+            $('ul>li:first').css('color','blue');
+            $('ul>li:first-child+li').css('color','gray');
+            $('ul>li:first-child~li[name]').html('xxxx');
+            $(':header').css('color','blue');
+
+        });
+    </script>
+</head>
+<body>
+    <h1>h1</h1>
+    <input type="text" id="input">
+    <p>text content.</p>
+    <div id="div1"> java</div>
+    <ul>
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li name='lid'>d</li>
+        <li name="lie">e</li>
+    </ul>
+    <h2>h2</h2>
+</body>
+</html>
