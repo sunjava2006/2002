@@ -23,6 +23,11 @@
 <!--      <url-pattern>/login</url-pattern> -->
 <!--   </servlet-mapping> -->
 
+    <context-param>
+        <param-name>page_size</param-name>
+        <param-value>5</param-value>
+    </context-param>
+
     <filter>
         <filter-name>charsetfilter</filter-name>
         <filter-class>com.thzhima.jw.filters.GeneralSetCharsetFilter</filter-class>

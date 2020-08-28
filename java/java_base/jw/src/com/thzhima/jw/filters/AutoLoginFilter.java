@@ -61,7 +61,7 @@ public class AutoLoginFilter implements Filter {
 					}
 					if(u!=null) {//登录成功，用户信息加入session 。重定向到管理页面。
 						session.setAttribute("userInfo", u);
-						((HttpServletResponse)response).sendRedirect("/manage.html");
+						((HttpServletResponse)response).sendRedirect("/manage.jsp");
 					}
 					else { // 登录失败
 						req.getRequestDispatcher("/index.jsp").forward(request, response);
@@ -96,7 +96,7 @@ public class AutoLoginFilter implements Filter {
 			// 如果在已经登录的情况下，访问登录页面交被转发到管理页面。
 			String path = req.getRequestURI();
 			if("".equals(path) || "/".equals(path)) {
-				req.getRequestDispatcher("/manage.html").forward(request, response);
+				req.getRequestDispatcher("/manage.jsp").forward(request, response);
 				chain.doFilter(request, response);
 				return;
 			}else {//已经登录 ，访问的不是登录页面。都可以访问。

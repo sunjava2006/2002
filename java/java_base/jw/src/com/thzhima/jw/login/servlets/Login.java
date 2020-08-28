@@ -57,7 +57,7 @@ public class Login extends HttpServlet {
 			
 			HttpSession session = request.getSession(true);
 			session.setAttribute("userInfo", user);
-			response.sendRedirect("/manage.html"); // 重定向
+			response.sendRedirect("/manage.jsp"); // 重定向
 		} else {
 			// 获取请求转发对象
 			request.setAttribute("msg", "用户名或密码不正确。");
