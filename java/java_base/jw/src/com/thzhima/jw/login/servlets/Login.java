@@ -6,6 +6,7 @@ import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -44,6 +45,16 @@ public class Login extends HttpServlet {
 			dispatcher.forward(request, response);// 转发
 		}
 		if (null != user) {
+			String auto = request.getParameter("autoLogin");
+			if(null != auto) {
+				Cookie c = new Cookie("loginName", user.getLoginName());
+				Cookie c2 = new Cookie("pwd", user.getPwd());
+				c.setMaxAge(60*60*24*10);
+				c2.setMaxAge(60*60*24*10);
+				response.addCookie(c);
+				response.addCookie(c2);
+			}
+			
 			HttpSession session = request.getSession(true);
 			session.setAttribute("userInfo", user);
 			response.sendRedirect("/manage.html"); // 重定向

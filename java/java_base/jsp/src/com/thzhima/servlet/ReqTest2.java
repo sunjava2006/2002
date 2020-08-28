@@ -41,13 +41,13 @@ public class ReqTest2 extends HttpServlet {
 		
 		//*******************响应**********************
 		// 与http响应头有关数据
-//		response.setStatus(200);
-//		response.setHeader("Location", "http://www.qq.com");
-//		response.setCharacterEncoding("utf-8");
-//		PrintWriter out = response.getWriter(); // 获取输出流，直接输出数据。
-//		out.write("hello");
+		response.setStatus(302); //设置状态码
+		response.setHeader("Location", "http://www.qq.com"); // 设置响应头
+		response.setCharacterEncoding("utf-8");
+		PrintWriter out = response.getWriter(); // 获取输出流，直接输出数据。
+		out.write("hello");
 		
-//		response.sendError(404);
+		response.sendError(404); // 设置错误状态码
 		
 		response.sendRedirect("http://www.sina.com.cn"); // 重定向
 	}

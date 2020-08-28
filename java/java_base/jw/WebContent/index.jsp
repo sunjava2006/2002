@@ -22,7 +22,7 @@
 
 		<div class="row col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3  " >
 
-			<form action="/login" method="POST">
+			<form action="/login" method="GET">
 
 				<div class="panel panel-primary " >
 
@@ -47,12 +47,13 @@
 
 					</div>
 					<div class="panel-footer">
+					    <input type="checkbox" name="autoLogin">10天免登录
 						<label id="msg">
-						<% String msg = (String)request.getAttribute("msg");
-						   if(null!=msg){
-							   out.print(msg);
-						   }
-						%>
+<%-- 						<% String msg = (String)request.getAttribute("msg"); 
+ 						   if(null!=msg){
+ 							   out.print(msg);
+ 						   }
+ 						%> --%>
 						 ${msg}</label>
 						
                         
