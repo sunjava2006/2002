@@ -34,4 +34,20 @@ public class ClassService {
 	public static int totalPage(double totalRecord, double size) {
 		return (int)Math.ceil(totalRecord/size);
 	}
+	
+	/**
+	 * 根据班级ID,更新班级信息。
+	 * @param classNO
+	 * @param className
+	 * @param id
+	 * @return
+	 * @throws Exception
+	 */
+	public static int updateByID(String classNO, String className, int id) throws Exception {
+		return ClassDAO.updateByID(classNO, className, id);
+	}
+	
+	public static void delClassWithStudents(int classID) throws Exception {
+		ClassDAO.delByID(classID);
+	}
 }

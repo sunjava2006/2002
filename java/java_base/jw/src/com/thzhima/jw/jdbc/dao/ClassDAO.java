@@ -8,6 +8,13 @@ import com.thzhima.jw.jdbc.ResultSetExtractor;
 
 public class ClassDAO {
 
+	public static int[] delByID(int classID) throws Exception {
+		String delStu = "delete from t_students where class_id="+classID;
+		String delClass = "delete from t_classes where id="+classID;
+		
+		return JdbcTemplate.executePatch(delStu, delClass);
+	}
+	
 	public static int insert(String classNO, String className) throws Exception {
 		int count = 0;
 		String sql ="insert into t_classes values (seq_class.nextval, ?, ?)";
@@ -83,5 +90,10 @@ public class ClassDAO {
 		}
 		
 		return li;
+	}
+
+	public static int updateByID(String classNO, String className, int id) throws Exception {
+		String sql = "update t_classes set class_no=?, class_name=? where id=?";
+		return JdbcTemplate.saveOrUpdate(sql, classNO, className, id);
 	}
 }

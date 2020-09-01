@@ -39,6 +39,8 @@
         </div>
         <div class="bg-warning col-xs-12 col-sm-12 col-md-12 col-lg-12" style="height:100px; line-height:100px;">
            总访问数：<%=application.getAttribute("accessCount")%>
+           
+           当前在线管理员：<%=application.getAttribute("adminList") %>
         </div>
         
     <!-- </div> -->

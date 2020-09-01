@@ -27,6 +27,28 @@
             });
         });
 
+        function modify(btn){
+            var tr = $(btn).parents('tr').children('td').each(function(i){
+                console.log(i);
+               
+                if(i==0){
+                    var id = $(this).text();
+                    $('#mid').val(id);
+                }
+                else if(i==1){
+                    var classNO = $(this).text();
+                    $('#mclassNO').val(classNO);
+                }
+                else if(i==2){
+                    var className = $(this).text();
+                    $('#mclassName').val(className);
+                }
+                
+            });
+
+            $('#modifyPop').modal('show');
+           
+        }
 
     </script>
 </head>
@@ -106,14 +128,19 @@
                  <th>id</th>
                  <th>班级编号</th>
                  <th>班级名</th>
+                 <th style="width:130px;"></th>
              </tr>
          </thead>
          <tbody>
 <%for(Class c : li){ %>         
-             <tr>
+             <tr style="line-height:51px">
                  <td><%=c.getId() %></td>
                  <td><%=c.getClassNO() %></td>
                  <td><%=c.getClassName() %></td>
+                 <td>
+                    <button type="button" class="btn btn-info" onclick="modify(this)">修改</button>
+                    <a href="/delClass?id=<%=c.getId() %>" class="btn btn-warning">删除</a>
+                 </td>
              </tr>
              
 <% }%>             
@@ -147,10 +174,11 @@
       String classNO = request.getParameter("classNO");
       String className = request.getParameter("className");
       if(classNO!=null && !"".equals(classNO)){
-    	  classNO = URLEncoder.encode(classNO);
+    	  classNO = classNO.replaceAll("%", "%25");
       }
       if(className!=null && !"".equals(className)){
-    	  className = URLEncoder.encode(className);
+    	  className = className.replaceAll("%","%25");
+    	  
       }
      
 %>
@@ -180,6 +208,35 @@
         </div>
 
     </div>
+
+ <form action="/modifyClass" method="POST">
+        <input type="hidden" name="id" id="mid">
+        <div class="modal fade"  id="modifyPop" role="dialog" tabindex="-1"><!-- 按ESC消除对话框，要设置tabindex属性 -->
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+                        <h4> 班级信息修改</h4>
+                    </div>
+                    <div class="modal-body">
+    
+                        <div class="input-group">
+                                    <div class="input-group-addon">班级编号</div>
+                                    <input type="text" class="form-control" id="mclassNO" name="classNO">
+                                    <div class="input-group-addon">班级名</div>
+                                    <input type="text" class="form-control" id="mclassName" name="className">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button"  class="btn btn-danger" data-dismiss="modal" value="保存" onclick="document.forms[2].submit()">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    </form>
+
+
 
 </body>
 
