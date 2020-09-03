@@ -1,0 +1,603 @@
+ERROR - java.lang.ArithmeticException: / by zero
+ERROR - java.lang.ArithmeticException: / by zero
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 2028371466.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@78e67e0a]
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@78e67e0a]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@78e67e0a]
+DEBUG - Returned connection 2028371466 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 2028371466.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@78e67e0a]
+DEBUG - ==>  Preparing: select * from t_admins
+DEBUG - ==> Parameters: 
+DEBUG - <==      Total: 2
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@78e67e0a]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@78e67e0a]
+DEBUG - Returned connection 2028371466 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 2028371466.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@78e67e0a]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@78e67e0a]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@78e67e0a]
+DEBUG - Returned connection 2028371466 to pool.
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 2028371466 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@78e67e0a]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@78e67e0a]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@78e67e0a]
+DEBUG - Returned connection 2028371466 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 592688102.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@2353b3e6]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@2353b3e6]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@2353b3e6]
+DEBUG - Returned connection 592688102 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 592688102.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@2353b3e6]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@2353b3e6]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@2353b3e6]
+DEBUG - Returned connection 592688102 to pool.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.5
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1123629720.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1123629720 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: update t_admins set pwd=? where id=?
+DEBUG - ==> Parameters: aaa(String), 90(Integer)
+DEBUG - <==    Updates: 1
+DEBUG - Committing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1123629720 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1123629720.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1123629720 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: update t_admins set pwd=? where id=?
+DEBUG - ==> Parameters: aaa(String), 90(Integer)
+DEBUG - <==    Updates: 1
+DEBUG - Committing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1123629720 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1123629720.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1123629720 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: update t_admins set pwd=? where id=?
+DEBUG - ==> Parameters: aaa(String), 90(Integer)
+DEBUG - <==    Updates: 1
+DEBUG - Committing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1123629720 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1123629720.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1123629720 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: update t_admins set pwd=? where id=?
+DEBUG - ==> Parameters: aaa(String), 90(Integer)
+DEBUG - <==    Updates: 1
+DEBUG - Committing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.5
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1123629720.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1123629720 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: update t_admins set pwd=? where id=?
+DEBUG - ==> Parameters: 123456(String), 90(Integer)
+DEBUG - <==    Updates: 1
+DEBUG - Committing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.5
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1123629720.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1123629720 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: update t_admins set pwd=? where id=?
+DEBUG - ==> Parameters: 123456(String), 90(Integer)
+DEBUG - <==    Updates: 1
+DEBUG - Committing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.5
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1123629720.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1123629720 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: update t_admins set pwd=? where id=?
+DEBUG - ==> Parameters: 123456(String), 90(Integer)
+DEBUG - <==    Updates: 1
+DEBUG - Committing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1123629720 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1123629720.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1123629720 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: update t_admins set pwd=? where id=?
+DEBUG - ==> Parameters: 123456(String), 90(Integer)
+DEBUG - <==    Updates: 1
+DEBUG - Committing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1863932867.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@6f195bc3]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@6f195bc3]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@6f195bc3]
+DEBUG - Returned connection 1863932867 to pool.
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1863932867 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@6f195bc3]
+DEBUG - ==>  Preparing: update t_admins set pwd=? where id=?
+DEBUG - ==> Parameters: 123456(String), 90(Integer)
+DEBUG - <==    Updates: 1
+DEBUG - Committing JDBC Connection [oracle.jdbc.driver.T4CConnection@6f195bc3]
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@6f195bc3]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@6f195bc3]
+DEBUG - Returned connection 1863932867 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1863932867.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@6f195bc3]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@6f195bc3]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@6f195bc3]
+DEBUG - Returned connection 1863932867 to pool.
+DEBUG - Opening JDBC Connection
+DEBUG - Checked out connection 1863932867 from pool.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@6f195bc3]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@6f195bc3]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@6f195bc3]
+DEBUG - Returned connection 1863932867 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1123629720.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - ==>  Preparing: select * from t_admins where id=?
+DEBUG - ==> Parameters: 90(Integer)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@42f93a98]
+DEBUG - Returned connection 1123629720 to pool.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.5
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 422392391.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@192d3247]
+DEBUG - ==>  Preparing: select * from t_classes WHERE class_no like ?
+DEBUG - ==> Parameters: 150101(String)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@192d3247]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@192d3247]
+DEBUG - Returned connection 422392391 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1391942103.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@52f759d7]
+DEBUG - ==>  Preparing: select * from t_classes WHERE class_no like ? or class_name like ?
+DEBUG - ==> Parameters: 150101(String), 15计算机2班(String)
+DEBUG - <==      Total: 2
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@52f759d7]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@52f759d7]
+DEBUG - Returned connection 1391942103 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 422392391.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@192d3247]
+DEBUG - ==>  Preparing: select * from t_classes WHERE class_no like ?
+DEBUG - ==> Parameters: 1501(String)
+DEBUG - <==      Total: 0
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@192d3247]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@192d3247]
+DEBUG - Returned connection 422392391 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 422392391.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@192d3247]
+DEBUG - ==>  Preparing: select * from t_classes WHERE class_no like ?
+DEBUG - ==> Parameters: 1501%(String)
+DEBUG - <==      Total: 3
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@192d3247]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@192d3247]
+DEBUG - Returned connection 422392391 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 863125040.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@33723e30]
+DEBUG - ==>  Preparing: select * from t_classes WHERE class_no like ?
+DEBUG - ==> Parameters: %Class [id=null, classNO=1501, className=null, students=null]%(String)
+DEBUG - <==      Total: 0
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@33723e30]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@33723e30]
+DEBUG - Returned connection 863125040 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 863125040.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@33723e30]
+DEBUG - ==>  Preparing: select * from t_classes WHERE class_no like ?
+DEBUG - ==> Parameters: %1501%(String)
+DEBUG - <==      Total: 3
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@33723e30]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@33723e30]
+DEBUG - Returned connection 863125040 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Cache Hit Ratio [com.thzhima.jw.beans.AdminUser]: 0.0
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 863125040.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@33723e30]
+DEBUG - ==>  Preparing: select * from t_classes WHERE class_name like ?
+DEBUG - ==> Parameters: %计算机%(String)
+DEBUG - <==      Total: 7
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@33723e30]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@33723e30]
+DEBUG - Returned connection 863125040 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1136497418.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
+DEBUG - ==>  Preparing: delete from t_classes WHERE id in ( ? , ? , ? )
+DEBUG - ==> Parameters: 100(Integer), 200(Integer), 300(Integer)
+DEBUG - <==    Updates: 0
+DEBUG - Committing JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
+DEBUG - Returned connection 1136497418 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1136497418.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
+DEBUG - ==>  Preparing: delete from t_classes WHERE id in ( ? , ? , ? )
+DEBUG - ==> Parameters: 100(Integer), 200(Integer), 300(Integer)
+DEBUG - <==    Updates: 0
+DEBUG - Committing JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
+DEBUG - Returned connection 1136497418 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 1136497418.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
+DEBUG - ==>  Preparing: delete from t_classes WHERE id in ( ? , ? , ? )
+DEBUG - ==> Parameters: 100(Integer), 200(Integer), 300(Integer)
+DEBUG - <==    Updates: 0
+DEBUG - Committing JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
+DEBUG - Returned connection 1136497418 to pool.

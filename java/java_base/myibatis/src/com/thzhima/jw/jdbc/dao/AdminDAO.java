@@ -55,9 +55,17 @@ public class AdminDAO {
 	}
 	
 	public static void main(String[] args) throws Exception {
-//		AdminUser u = findByID(100);
+		AdminUser u = findByID(90);
+		System.out.println(u);
+		
+//		u.setPwd("123456");
+//		update(u);
+		
+		u = findByID(90);
+		System.out.println(u);
+		
 //		u.setPwd("ABCabc");
 //		System.out.println(update(u));
-		System.out.println(delete(100));
+//		System.out.println(delete(100));
 	}
 }

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.thzhima.jw.beans.Student">
+    <resultMap type="Student" id="StudentMap">
+      <id property="ID" column="id"/>
+      <result property="stuNO" column="stu_no"/>
+      <result property="name" column="name"/>
+      <result property="gender" column="gender"/>
+      <result property="personID" column="person_id"/>
+      <result property="phone" column="phone"/>
+      <result property="photo" column="photo"/>
+      <result property="homeTown" column="home_town"/>
+      <association property="myClass" column="class_id" javaType="Class" >
+         <id property="id" column="cid"/>
+         <result property="classNO" column="class_no"/>
+         <result property="className" column="class_name"/>
+      </association>
+    </resultMap>
+    
+    <resultMap type="Student" id="StudentMap2">
+      <id property="ID" column="id"/>
+      <result property="stuNO" column="stu_no"/>
+      <result property="name" column="name"/>
+      <result property="gender" column="gender"/>
+      <result property="personID" column="person_id"/>
+      <result property="phone" column="phone"/>
+      <result property="photo" column="photo"/>
+      <result property="homeTown" column="home_town"/>
+      <association property="myClass" column="class_id" javaType="Class" 
+           select="com.thzhima.jw.beans.Class.selectByID">
+      </association>
+    </resultMap>
+    
+    
+    <resultMap type="Student" id="StudentWithoutClassMap">
+      <id property="ID" column="id"/>
+      <result property="stuNO" column="stu_no"/>
+      <result property="name" column="name"/>
+      <result property="gender" column="gender"/>
+      <result property="personID" column="person_id"/>
+      <result property="phone" column="phone"/>
+      <result property="photo" column="photo"/>
+      <result property="homeTown" column="home_town"/>
+    </resultMap>
+    
+    <insert id="insert" parameterType="Student">
+        <selectKey order="BEFORE" keyColumn="id" keyProperty="ID" resultType="int" >
+           select seq_student.nextval from dual
+        </selectKey>
+        insert into t_students (id, stu_no, name, gender, person_id, home_town, phone, class_id, photo) 
+        values(#{ID}, #{stuNO}, #{name}, #{gender}, #{personID}, #{homeTown}, #{phone}, #{myClass.id}, #{photo, jdbcType=VARCHAR, javaType=String})
+    </insert>
+    
+    <select id="selectByID" parameterType="int" resultMap="StudentMap">
+        select s.*, t.id cid, t.class_NO , t.class_name 
+        from t_students s 
+        join t_classes t 
+        on s.class_id=t.id where s.id=#{id}
+    </select>
+    
+    <select id="selectByID2" parameterType="int" resultMap="StudentMap2">
+       select * from t_students where id=#{id}
+    </select>
+    
+    <select id="selectByClassID" parameterType="int" resultMap="StudentWithoutClassMap">
+       select * from t_students where class_id=#{classid}
+    </select>
+
+</mapper>

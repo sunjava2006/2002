@@ -46,10 +46,10 @@ public class AccessCountListener implements HttpSessionListener, HttpSessionAttr
         	ServletContext application = se.getSession().getServletContext();
         	List<String> list = (List<String>)application.getAttribute("adminList");
         	// 判断当前用户是否重复登录
-        	if(list.contains(loginName)) {
-        		se.getSession().removeAttribute("userInfo");
-        		
-        	}
+//        	if(list.contains(loginName)) {
+//        		se.getSession().removeAttribute("userInfo");
+//        		
+//        	}
         	
         	
         	

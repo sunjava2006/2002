@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.thzhima.jw.beans.Class">
+    <cache-ref namespace="com.thzhima.jw.beans.AdminUser"/>
+    <resultMap type="Class" id="ClassMap">
+        <id property="id" column="id"/>
+        <result property="classNO" column="class_no"/>
+        <result property="className" column="class_name"/>
+    </resultMap>
+    
+    <resultMap type="Class" id="ClassWithStudentMap">
+        <id property="id" column="id"/>
+        <result property="classNO" column="class_no"/>
+        <result property="className" column="class_name"/>
+        <collection property="students" ofType="Student" column="id" fetchType="eager"
+            select="com.thzhima.jw.beans.Student.selectByClassID" >
+		     
+        </collection>
+    </resultMap>
+    
+    <select id="selectByID" parameterType="int" resultMap="ClassMap">
+        select * from t_classes where id=#{id}
+    </select>
+    
+    <select id="selectByIDWithStudent" parameterType="int" resultMap="ClassWithStudentMap">
+        select * from t_classes where id=#{id}
+    </select>
+    
+    <select id="qualyQueryNoOrName" parameterType="Class"  resultMap="ClassMap">
+        select * from t_classes
+        <where>
+            <if test="classNO!=null">
+            class_no like #{classNO}
+            </if>
+            <if test="className!=null">
+            or class_name like #{className}
+            </if>
+        </where>
+    </select>
+    
+    <select id="queryNoOrName" parameterType="Class"  resultMap="ClassMap">
+        select * from t_classes
+        <where>
+            <if test="classNO!=null">
+            <bind name="NO" value="'%'+classNO+'%'"/>
+               class_no like #{NO}
+            </if>
+            <if test="className!=null">
+            <bind name="name" value="'%'+className+'%'"/>
+            or class_name like #{name}
+            </if>
+        </where>
+    </select>
+    
+    <update id="update" parameterType="Class">
+        update t_classes
+        <set>
+            <if test="classNO!=null">
+               colass_no=#{classNO},
+            </if>
+            <if test="className!=null">
+               class_name=#{className},
+            </if>
+        </set>
+        <where>
+            <choose>
+                <when test="id!=null">
+                    id=#{id}
+                </when>
+                <otherwise>
+                   1=2
+                </otherwise>
+            </choose>
+        </where>
+    </update>
+    
+    
+    <delete id="delByIDList">
+      delete from t_classes 
+      <where>
+         <if test="array!=null">
+           id in 
+           <foreach collection="array" open="(" close=")" separator="," item="i">
+           #{i}
+           </foreach>
+         </if>
+      </where>
+    </delete>
+    
+    
+
+</mapper>

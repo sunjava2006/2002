@@ -1,6 +1,8 @@
 package com.thzhima.jw.beans;
 
-public class AdminUser {
+import java.io.Serializable;
+
+public class AdminUser implements Serializable{
 
 	private Integer ID;
 	private String loginName;

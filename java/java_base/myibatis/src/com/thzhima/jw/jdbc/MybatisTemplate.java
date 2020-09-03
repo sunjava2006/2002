@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 
-import com.thzhima.jw.beans.AdminUser;
+
 
 public class MybatisTemplate {
 	
@@ -228,6 +228,19 @@ public class MybatisTemplate {
 	}
 	
 	public static void main(String[] args) {
-		
+		SqlSession session = null;
+		try {
+			session = SessionUtil.getSession();
+			Object o = session.selectMap("listAllMap","ID");
+			session.commit();
+			System.out.println(o);
+		} catch (Exception e) {
+			session.rollback();
+			throw e;
+		} finally {
+			if(null != session) {
+				session.close();
+			}
+		}
 	}
 }

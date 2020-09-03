@@ -4,6 +4,8 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.thzhima.jw.beans.AdminUser">
+    <cache eviction="LRU" flushInterval="6000" readOnly="false"></cache>
+
     <resultMap type="com.thzhima.jw.beans.AdminUser" id="AdminUserMap">
         <id property="ID" column="id" />
         <result property="loginName" column="login_name"/>
@@ -31,7 +33,7 @@
         where ro &gt; #{from}
     </select>
     
-    <select id="findByID" parameterType="int" resultMap="AdminUserMap">
+    <select id="findByID" parameterType="int" resultMap="AdminUserMap" useCache="true">
         select * from t_admins where id=#{id}
     </select>
     
@@ -39,7 +41,7 @@
        select count(*) from t_admins
     </select>
     
-    <update id="updatePWD" parameterType="com.thzhima.jw.beans.AdminUser">
+    <update id="updatePWD" parameterType="com.thzhima.jw.beans.AdminUser" keyProperty="ID" flushCache="true">
         update t_admins set pwd=#{pwd} where id=#{ID}
     </update>
     
