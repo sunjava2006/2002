@@ -1,14 +1,18 @@
 package com.thzhima.jw.beans;
 
-public class Class {
+import java.io.Serializable;
+import java.util.List;
 
-	private int id;
+public class Class implements Serializable{
+
+	private Integer id;
 	private String classNO;
 	private String className;
-	public int getId() {
+	List<Student> students;
+	public Integer getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 	public String getClassNO() {
@@ -23,20 +27,29 @@ public class Class {
 	public void setClassName(String className) {
 		this.className = className;
 	}
-	public Class(int id, String classNO, String className) {
+	public List<Student> getStudents() {
+		return students;
+	}
+	public void setStudents(List<Student> students) {
+		this.students = students;
+	}
+	@Override
+	public String toString() {
+		return "Class [id=" + id + ", classNO=" + classNO + ", className=" + className + ", students=" + students + "]";
+	}
+	public Class(Integer id, String classNO, String className, List<Student> students) {
 		super();
 		this.id = id;
 		this.classNO = classNO;
 		this.className = className;
+		this.students = students;
 	}
 	public Class() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Override
-	public String toString() {
-		return "Class [id=" + id + ", classNO=" + classNO + ", className=" + className + "]";
-	}
+	
+	
 	
 	
 }

@@ -81,6 +81,7 @@
     <delete id="delByIDList">
       delete from t_classes 
       <where>
+         <!-- 数组做参数为array , 列表做参数为list -->
          <if test="array!=null">
            id in 
            <foreach collection="array" open="(" close=")" separator="," item="i">

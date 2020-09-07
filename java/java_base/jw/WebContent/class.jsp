@@ -134,7 +134,7 @@
          <tbody>
 <%for(Class c : li){ %>         
              <tr style="line-height:51px">
-                 <td><%=c.getId() %></td>
+                 <td><%=c.getId().intValue() %></td>
                  <td><%=c.getClassNO() %></td>
                  <td><%=c.getClassName() %></td>
                  <td>
