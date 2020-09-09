@@ -44,6 +44,7 @@
     <mapper resource="com/thzhima/jw/beans/AdminUserMapper.xml"/>
     <mapper resource="com/thzhima/jw/beans/ClassMapper.xml"/>
     <mapper resource="com/thzhima/jw/beans/StudentMapper.xml"/>
+  
   </mappers>
 
 </configuration>

@@ -11,7 +11,7 @@ public class AdminService {
 
 	@Autowired AdminDAO adminDAO;
 	
-	public AdminUser login(String loginName, String pwd) {
-		return this.adminDAO.findByLoginNamePwd(loginName, pwd);
+	public AdminUser login(AdminUser u) {
+		return this.adminDAO.findByExample(u);
 	}
 }

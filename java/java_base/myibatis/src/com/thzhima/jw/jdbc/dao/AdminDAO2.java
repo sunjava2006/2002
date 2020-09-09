@@ -10,7 +10,7 @@ import com.thzhima.jw.beans.AdminUser;
 import com.thzhima.jw.jdbc.MybatisTemplate;
 
 
-public class AdminDAO {
+public class AdminDAO2 {
 	
 	public static int count() throws Exception{
 		String selid = AdminUser.class.getName()+".count";

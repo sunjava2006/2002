@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.SelectProvider;
 
 import com.thzhima.jw.beans.AdminUser;
 
@@ -19,4 +20,8 @@ public interface AdminDAO {
 		@Result(property = "pwd", column = "pwd")
 	})
 	public AdminUser findByLoginNamePwd(String loginName, String pwd);
+	
+	@SelectProvider(type = com.thzhima.jw.dao.AdminSqlProvider.class, method = "selectByExam")
+	@ResultMap("AdminUserMap")
+	public AdminUser findByExample(AdminUser u);
 }

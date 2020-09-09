@@ -601,3 +601,491 @@ DEBUG - Committing JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
 DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
 DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@43bd930a]
 DEBUG - Returned connection 1136497418 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Class not found: org.jboss.vfs.VFS
+DEBUG - JBoss 6 VFS API is not available in this environment.
+DEBUG - Class not found: org.jboss.vfs.VirtualFile
+DEBUG - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+DEBUG - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Reader entry: AdminDAO.class
+DEBUG - Reader entry: beans
+DEBUG - Reader entry: jdbc
+DEBUG - Reader entry: LogTest.class
+DEBUG - Reader entry: Test.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/AdminDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/AdminDAO.class
+DEBUG - Reader entry: Êþº¾   4   com/thzhima/jw/AdminDAO  java/lang/Object findByLoginNamePwd F(Ljava/lang/String;Ljava/lang/String;)Lcom/thzhima/jw/beans/AdminUser; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value Cselect * from t_admins where login_name=#{loginName} and pwd=#{pwd} 'Lorg/apache/ibatis/annotations/Results; id AdminUserMap &Lorg/apache/ibatis/annotations/Result; property ID column    	loginName 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Reader entry: AdminUser.class
+DEBUG - Reader entry: AdminUserMapper.xml
+DEBUG - Reader entry: Class.class
+DEBUG - Reader entry: ClassMapper.xml
+DEBUG - Reader entry: Student.class
+DEBUG - Reader entry: StudentMapper.xml
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUser.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUser.class
+DEBUG - Reader entry: Êþº¾   4 ?  com/thzhima/jw/beans/AdminUser  java/lang/Object  java/io/Serializable ID Ljava/lang/Integer; 	loginName Ljava/lang/String; pwd <init> :(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUserMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUserMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Class.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Class.class
+DEBUG - Reader entry: Êþº¾   4 N  com/thzhima/jw/beans/Class  java/lang/Object  java/io/Serializable id Ljava/lang/Integer; classNO Ljava/lang/String; 	className students Ljava/util/List; 	Signature 0Ljava/util/List<Lcom/thzhima/jw/beans/Student;>; getId ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this Lcom/thzhima/jw/beans/Class; setId (Ljava/lang/Integer;)V 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/ClassMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/ClassMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Student.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Student.class
+DEBUG - Reader entry: Êþº¾   4 l  com/thzhima/jw/beans/Student  java/lang/Object  java/io/Serializable ID Ljava/lang/Integer; stuNO Ljava/lang/String; name gender personID homeTown phone myClass Lcom/thzhima/jw/beans/Class; photo getID ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this Lcom/thzhima/jw/beans/Student; setID (Ljava/lang/Integer;)V iD getStuNO ()Ljava/lang/String;	  " 	 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/StudentMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/StudentMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Reader entry: dao
+DEBUG - Reader entry: MybatisTemplate.class
+DEBUG - Reader entry: SessionUtil.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Reader entry: AdminDAO.class
+DEBUG - Reader entry: ClassDAO.class
+DEBUG - Reader entry: StudentDAO.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/AdminDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/AdminDAO.class
+DEBUG - Reader entry: Êþº¾   4 ?   com/thzhima/jw/jdbc/dao/AdminDAO  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/ClassDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/ClassDAO.class
+DEBUG - Reader entry: Êþº¾   4 n   com/thzhima/jw/jdbc/dao/ClassDAO  java/lang/Object 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/StudentDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/StudentDAO.class
+DEBUG - Reader entry: Êþº¾   4 [  "com/thzhima/jw/jdbc/dao/StudentDAO  java/lang/Object STUDENDT_CLASS_NAME Ljava/lang/String; <clinit> ()V Code  com/thzhima/jw/beans/Student
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/MybatisTemplate.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/MybatisTemplate.class
+DEBUG - Reader entry: Êþº¾   4   #com/thzhima/jw/jdbc/MybatisTemplate  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/SessionUtil.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/SessionUtil.class
+DEBUG - Reader entry: Êþº¾   4 7  com/thzhima/jw/jdbc/SessionUtil  java/lang/Object factory -Lorg/apache/ibatis/session/SqlSessionFactory; <clinit> ()V Code  2org/apache/ibatis/session/SqlSessionFactoryBuilder
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/LogTest.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/LogTest.class
+DEBUG - Reader entry: Êþº¾   4 8  com/thzhima/jw/LogTest  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/Test.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/Test.class
+DEBUG - Reader entry: Êþº¾   4 ?  com/thzhima/jw/Test  java/lang/Object <init> ()V Code
+DEBUG - Checking to see if class com.thzhima.jw.AdminDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.AdminUser matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.Class matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.Student matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.AdminDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.ClassDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.StudentDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.MybatisTemplate matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.SessionUtil matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.LogTest matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.Test matches criteria [is assignable to Object]
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Class not found: org.jboss.vfs.VFS
+DEBUG - JBoss 6 VFS API is not available in this environment.
+DEBUG - Class not found: org.jboss.vfs.VirtualFile
+DEBUG - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+DEBUG - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Reader entry: AdminDAO.class
+DEBUG - Reader entry: beans
+DEBUG - Reader entry: jdbc
+DEBUG - Reader entry: LogTest.class
+DEBUG - Reader entry: Test.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/AdminDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/AdminDAO.class
+DEBUG - Reader entry: Êþº¾   4   com/thzhima/jw/AdminDAO  java/lang/Object findByLoginNamePwd F(Ljava/lang/String;Ljava/lang/String;)Lcom/thzhima/jw/beans/AdminUser; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value Cselect * from t_admins where login_name=#{loginName} and pwd=#{pwd} 'Lorg/apache/ibatis/annotations/Results; id AdminUserMap &Lorg/apache/ibatis/annotations/Result; property ID column    	loginName 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Reader entry: AdminUser.class
+DEBUG - Reader entry: AdminUserMapper.xml
+DEBUG - Reader entry: Class.class
+DEBUG - Reader entry: ClassMapper.xml
+DEBUG - Reader entry: Student.class
+DEBUG - Reader entry: StudentMapper.xml
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUser.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUser.class
+DEBUG - Reader entry: Êþº¾   4 ?  com/thzhima/jw/beans/AdminUser  java/lang/Object  java/io/Serializable ID Ljava/lang/Integer; 	loginName Ljava/lang/String; pwd <init> :(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUserMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUserMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Class.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Class.class
+DEBUG - Reader entry: Êþº¾   4 N  com/thzhima/jw/beans/Class  java/lang/Object  java/io/Serializable id Ljava/lang/Integer; classNO Ljava/lang/String; 	className students Ljava/util/List; 	Signature 0Ljava/util/List<Lcom/thzhima/jw/beans/Student;>; getId ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this Lcom/thzhima/jw/beans/Class; setId (Ljava/lang/Integer;)V 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/ClassMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/ClassMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Student.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Student.class
+DEBUG - Reader entry: Êþº¾   4 l  com/thzhima/jw/beans/Student  java/lang/Object  java/io/Serializable ID Ljava/lang/Integer; stuNO Ljava/lang/String; name gender personID homeTown phone myClass Lcom/thzhima/jw/beans/Class; photo getID ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this Lcom/thzhima/jw/beans/Student; setID (Ljava/lang/Integer;)V iD getStuNO ()Ljava/lang/String;	  " 	 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/StudentMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/StudentMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Reader entry: dao
+DEBUG - Reader entry: MybatisTemplate.class
+DEBUG - Reader entry: SessionUtil.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Reader entry: AdminDAO2.class
+DEBUG - Reader entry: ClassDAO.class
+DEBUG - Reader entry: StudentDAO.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/AdminDAO2.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/AdminDAO2.class
+DEBUG - Reader entry: Êþº¾   4 ?  !com/thzhima/jw/jdbc/dao/AdminDAO2  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/ClassDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/ClassDAO.class
+DEBUG - Reader entry: Êþº¾   4 n   com/thzhima/jw/jdbc/dao/ClassDAO  java/lang/Object 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/StudentDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/StudentDAO.class
+DEBUG - Reader entry: Êþº¾   4 [  "com/thzhima/jw/jdbc/dao/StudentDAO  java/lang/Object STUDENDT_CLASS_NAME Ljava/lang/String; <clinit> ()V Code  com/thzhima/jw/beans/Student
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/MybatisTemplate.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/MybatisTemplate.class
+DEBUG - Reader entry: Êþº¾   4   #com/thzhima/jw/jdbc/MybatisTemplate  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/SessionUtil.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/SessionUtil.class
+DEBUG - Reader entry: Êþº¾   4 7  com/thzhima/jw/jdbc/SessionUtil  java/lang/Object factory -Lorg/apache/ibatis/session/SqlSessionFactory; <clinit> ()V Code  2org/apache/ibatis/session/SqlSessionFactoryBuilder
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/LogTest.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/LogTest.class
+DEBUG - Reader entry: Êþº¾   4 8  com/thzhima/jw/LogTest  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/Test.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/Test.class
+DEBUG - Reader entry: Êþº¾   4 ?  com/thzhima/jw/Test  java/lang/Object <init> ()V Code
+DEBUG - Checking to see if class com.thzhima.jw.AdminDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.AdminUser matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.Class matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.Student matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.AdminDAO2 matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.ClassDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.StudentDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.MybatisTemplate matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.SessionUtil matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.LogTest matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.Test matches criteria [is assignable to Object]
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Class not found: org.jboss.vfs.VFS
+DEBUG - JBoss 6 VFS API is not available in this environment.
+DEBUG - Class not found: org.jboss.vfs.VirtualFile
+DEBUG - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+DEBUG - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Reader entry: AdminDAO.class
+DEBUG - Reader entry: beans
+DEBUG - Reader entry: jdbc
+DEBUG - Reader entry: LogTest.class
+DEBUG - Reader entry: Test.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/AdminDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/AdminDAO.class
+DEBUG - Reader entry: Êþº¾   4   com/thzhima/jw/AdminDAO  java/lang/Object findByLoginNamePwd F(Ljava/lang/String;Ljava/lang/String;)Lcom/thzhima/jw/beans/AdminUser; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value Cselect * from t_admins where login_name=#{loginName} and pwd=#{pwd} 'Lorg/apache/ibatis/annotations/Results; id AdminUserMap &Lorg/apache/ibatis/annotations/Result; property ID column    	loginName 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Reader entry: AdminUser.class
+DEBUG - Reader entry: AdminUserMapper.xml
+DEBUG - Reader entry: Class.class
+DEBUG - Reader entry: ClassMapper.xml
+DEBUG - Reader entry: Student.class
+DEBUG - Reader entry: StudentMapper.xml
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUser.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUser.class
+DEBUG - Reader entry: Êþº¾   4 ?  com/thzhima/jw/beans/AdminUser  java/lang/Object  java/io/Serializable ID Ljava/lang/Integer; 	loginName Ljava/lang/String; pwd <init> :(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUserMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUserMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Class.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Class.class
+DEBUG - Reader entry: Êþº¾   4 N  com/thzhima/jw/beans/Class  java/lang/Object  java/io/Serializable id Ljava/lang/Integer; classNO Ljava/lang/String; 	className students Ljava/util/List; 	Signature 0Ljava/util/List<Lcom/thzhima/jw/beans/Student;>; getId ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this Lcom/thzhima/jw/beans/Class; setId (Ljava/lang/Integer;)V 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/ClassMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/ClassMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Student.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Student.class
+DEBUG - Reader entry: Êþº¾   4 l  com/thzhima/jw/beans/Student  java/lang/Object  java/io/Serializable ID Ljava/lang/Integer; stuNO Ljava/lang/String; name gender personID homeTown phone myClass Lcom/thzhima/jw/beans/Class; photo getID ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this Lcom/thzhima/jw/beans/Student; setID (Ljava/lang/Integer;)V iD getStuNO ()Ljava/lang/String;	  " 	 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/StudentMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/StudentMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Reader entry: dao
+DEBUG - Reader entry: MybatisTemplate.class
+DEBUG - Reader entry: SessionUtil.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Reader entry: AdminDAO2.class
+DEBUG - Reader entry: ClassDAO.class
+DEBUG - Reader entry: StudentDAO.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/AdminDAO2.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/AdminDAO2.class
+DEBUG - Reader entry: Êþº¾   4 ?  !com/thzhima/jw/jdbc/dao/AdminDAO2  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/ClassDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/ClassDAO.class
+DEBUG - Reader entry: Êþº¾   4 n   com/thzhima/jw/jdbc/dao/ClassDAO  java/lang/Object 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/StudentDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/StudentDAO.class
+DEBUG - Reader entry: Êþº¾   4 [  "com/thzhima/jw/jdbc/dao/StudentDAO  java/lang/Object STUDENDT_CLASS_NAME Ljava/lang/String; <clinit> ()V Code  com/thzhima/jw/beans/Student
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/MybatisTemplate.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/MybatisTemplate.class
+DEBUG - Reader entry: Êþº¾   4   #com/thzhima/jw/jdbc/MybatisTemplate  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/SessionUtil.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/SessionUtil.class
+DEBUG - Reader entry: Êþº¾   4 7  com/thzhima/jw/jdbc/SessionUtil  java/lang/Object factory -Lorg/apache/ibatis/session/SqlSessionFactory; <clinit> ()V Code  2org/apache/ibatis/session/SqlSessionFactoryBuilder
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/LogTest.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/LogTest.class
+DEBUG - Reader entry: Êþº¾   4 8  com/thzhima/jw/LogTest  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/Test.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/Test.class
+DEBUG - Reader entry: Êþº¾   4 ?  com/thzhima/jw/Test  java/lang/Object <init> ()V Code
+DEBUG - Checking to see if class com.thzhima.jw.AdminDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.AdminUser matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.Class matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.Student matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.AdminDAO2 matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.ClassDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.StudentDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.MybatisTemplate matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.SessionUtil matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.LogTest matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.Test matches criteria [is assignable to Object]
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Class not found: org.jboss.vfs.VFS
+DEBUG - JBoss 6 VFS API is not available in this environment.
+DEBUG - Class not found: org.jboss.vfs.VirtualFile
+DEBUG - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+DEBUG - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Reader entry: AdminDAO.class
+DEBUG - Reader entry: beans
+DEBUG - Reader entry: jdbc
+DEBUG - Reader entry: LogTest.class
+DEBUG - Reader entry: Test.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/AdminDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/AdminDAO.class
+DEBUG - Reader entry: Êþº¾   4   com/thzhima/jw/AdminDAO  java/lang/Object findByLoginNamePwd F(Ljava/lang/String;Ljava/lang/String;)Lcom/thzhima/jw/beans/AdminUser; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value Cselect * from t_admins where login_name=#{loginName} and pwd=#{pwd} 'Lorg/apache/ibatis/annotations/Results; id AdminUserMap &Lorg/apache/ibatis/annotations/Result; property ID column    	loginName 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Reader entry: AdminUser.class
+DEBUG - Reader entry: AdminUserMapper.xml
+DEBUG - Reader entry: Class.class
+DEBUG - Reader entry: ClassMapper.xml
+DEBUG - Reader entry: Student.class
+DEBUG - Reader entry: StudentMapper.xml
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUser.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUser.class
+DEBUG - Reader entry: Êþº¾   4 ?  com/thzhima/jw/beans/AdminUser  java/lang/Object  java/io/Serializable ID Ljava/lang/Integer; 	loginName Ljava/lang/String; pwd <init> :(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUserMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUserMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Class.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Class.class
+DEBUG - Reader entry: Êþº¾   4 N  com/thzhima/jw/beans/Class  java/lang/Object  java/io/Serializable id Ljava/lang/Integer; classNO Ljava/lang/String; 	className students Ljava/util/List; 	Signature 0Ljava/util/List<Lcom/thzhima/jw/beans/Student;>; getId ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this Lcom/thzhima/jw/beans/Class; setId (Ljava/lang/Integer;)V 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/ClassMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/ClassMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Student.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Student.class
+DEBUG - Reader entry: Êþº¾   4 l  com/thzhima/jw/beans/Student  java/lang/Object  java/io/Serializable ID Ljava/lang/Integer; stuNO Ljava/lang/String; name gender personID homeTown phone myClass Lcom/thzhima/jw/beans/Class; photo getID ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this Lcom/thzhima/jw/beans/Student; setID (Ljava/lang/Integer;)V iD getStuNO ()Ljava/lang/String;	  " 	 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/StudentMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/StudentMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Reader entry: dao
+DEBUG - Reader entry: MybatisTemplate.class
+DEBUG - Reader entry: SessionUtil.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Reader entry: AdminDAO2.class
+DEBUG - Reader entry: ClassDAO.class
+DEBUG - Reader entry: StudentDAO.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/AdminDAO2.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/AdminDAO2.class
+DEBUG - Reader entry: Êþº¾   4 ?  !com/thzhima/jw/jdbc/dao/AdminDAO2  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/ClassDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/ClassDAO.class
+DEBUG - Reader entry: Êþº¾   4 n   com/thzhima/jw/jdbc/dao/ClassDAO  java/lang/Object 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/StudentDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/StudentDAO.class
+DEBUG - Reader entry: Êþº¾   4 [  "com/thzhima/jw/jdbc/dao/StudentDAO  java/lang/Object STUDENDT_CLASS_NAME Ljava/lang/String; <clinit> ()V Code  com/thzhima/jw/beans/Student
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/MybatisTemplate.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/MybatisTemplate.class
+DEBUG - Reader entry: Êþº¾   4   #com/thzhima/jw/jdbc/MybatisTemplate  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/SessionUtil.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/SessionUtil.class
+DEBUG - Reader entry: Êþº¾   4 7  com/thzhima/jw/jdbc/SessionUtil  java/lang/Object factory -Lorg/apache/ibatis/session/SqlSessionFactory; <clinit> ()V Code  2org/apache/ibatis/session/SqlSessionFactoryBuilder
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/LogTest.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/LogTest.class
+DEBUG - Reader entry: Êþº¾   4 8  com/thzhima/jw/LogTest  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/Test.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/Test.class
+DEBUG - Reader entry: Êþº¾   4 ?  com/thzhima/jw/Test  java/lang/Object <init> ()V Code
+DEBUG - Checking to see if class com.thzhima.jw.AdminDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.AdminUser matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.Class matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.Student matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.AdminDAO2 matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.ClassDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.StudentDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.MybatisTemplate matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.SessionUtil matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.LogTest matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.Test matches criteria [is assignable to Object]
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 263025902.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@fad74ee]
+DEBUG - ==>  Preparing: select * from t_admins where login_name=? and pwd=?
+DEBUG - ==> Parameters: admin(String), 123456(String)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@fad74ee]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@fad74ee]
+DEBUG - Returned connection 263025902 to pool.
+DEBUG - Logging initialized using 'class org.apache.ibatis.logging.log4j.Log4jImpl' adapter.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - PooledDataSource forcefully closed/removed all connections.
+DEBUG - Class not found: org.jboss.vfs.VFS
+DEBUG - JBoss 6 VFS API is not available in this environment.
+DEBUG - Class not found: org.jboss.vfs.VirtualFile
+DEBUG - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment.
+DEBUG - Using VFS adapter org.apache.ibatis.io.DefaultVFS
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Reader entry: AdminDAO.class
+DEBUG - Reader entry: beans
+DEBUG - Reader entry: jdbc
+DEBUG - Reader entry: LogTest.class
+DEBUG - Reader entry: Test.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/AdminDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/AdminDAO.class
+DEBUG - Reader entry: Êþº¾   4   com/thzhima/jw/AdminDAO  java/lang/Object findByLoginNamePwd F(Ljava/lang/String;Ljava/lang/String;)Lcom/thzhima/jw/beans/AdminUser; RuntimeVisibleAnnotations &Lorg/apache/ibatis/annotations/Select; value Cselect * from t_admins where login_name=#{loginName} and pwd=#{pwd} 'Lorg/apache/ibatis/annotations/Results; id AdminUserMap &Lorg/apache/ibatis/annotations/Result; property ID column    	loginName 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Reader entry: AdminUser.class
+DEBUG - Reader entry: AdminUserMapper.xml
+DEBUG - Reader entry: Class.class
+DEBUG - Reader entry: ClassMapper.xml
+DEBUG - Reader entry: Student.class
+DEBUG - Reader entry: StudentMapper.xml
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUser.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUser.class
+DEBUG - Reader entry: Êþº¾   4 ?  com/thzhima/jw/beans/AdminUser  java/lang/Object  java/io/Serializable ID Ljava/lang/Integer; 	loginName Ljava/lang/String; pwd <init> :(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUserMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/AdminUserMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Class.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Class.class
+DEBUG - Reader entry: Êþº¾   4 N  com/thzhima/jw/beans/Class  java/lang/Object  java/io/Serializable id Ljava/lang/Integer; classNO Ljava/lang/String; 	className students Ljava/util/List; 	Signature 0Ljava/util/List<Lcom/thzhima/jw/beans/Student;>; getId ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this Lcom/thzhima/jw/beans/Class; setId (Ljava/lang/Integer;)V 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/ClassMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/ClassMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Student.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/Student.class
+DEBUG - Reader entry: Êþº¾   4 l  com/thzhima/jw/beans/Student  java/lang/Object  java/io/Serializable ID Ljava/lang/Integer; stuNO Ljava/lang/String; name gender personID homeTown phone myClass Lcom/thzhima/jw/beans/Class; photo getID ()Ljava/lang/Integer; Code	     LineNumberTable LocalVariableTable this Lcom/thzhima/jw/beans/Student; setID (Ljava/lang/Integer;)V iD getStuNO ()Ljava/lang/String;	  " 	 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/StudentMapper.xml
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/beans/StudentMapper.xml
+DEBUG - Reader entry: <?xml version="1.0" encoding="UTF-8" ?>
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Reader entry: dao
+DEBUG - Reader entry: MybatisTemplate.class
+DEBUG - Reader entry: SessionUtil.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Reader entry: AdminDAO2.class
+DEBUG - Reader entry: ClassDAO.class
+DEBUG - Reader entry: StudentDAO.class
+DEBUG - Listing file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/AdminDAO2.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/AdminDAO2.class
+DEBUG - Reader entry: Êþº¾   4 ?  !com/thzhima/jw/jdbc/dao/AdminDAO2  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/ClassDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/ClassDAO.class
+DEBUG - Reader entry: Êþº¾   4 n   com/thzhima/jw/jdbc/dao/ClassDAO  java/lang/Object 
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/StudentDAO.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/dao/StudentDAO.class
+DEBUG - Reader entry: Êþº¾   4 [  "com/thzhima/jw/jdbc/dao/StudentDAO  java/lang/Object STUDENDT_CLASS_NAME Ljava/lang/String; <clinit> ()V Code  com/thzhima/jw/beans/Student
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/MybatisTemplate.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/MybatisTemplate.class
+DEBUG - Reader entry: Êþº¾   4   #com/thzhima/jw/jdbc/MybatisTemplate  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/SessionUtil.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/jdbc/SessionUtil.class
+DEBUG - Reader entry: Êþº¾   4 7  com/thzhima/jw/jdbc/SessionUtil  java/lang/Object factory -Lorg/apache/ibatis/session/SqlSessionFactory; <clinit> ()V Code  2org/apache/ibatis/session/SqlSessionFactoryBuilder
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/LogTest.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/LogTest.class
+DEBUG - Reader entry: Êþº¾   4 8  com/thzhima/jw/LogTest  java/lang/Object <init> ()V Code
+DEBUG - Find JAR URL: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/Test.class
+DEBUG - Not a JAR: file:/D:/_git_code_workspace/2002/java/java_base/myibatis/bin/com/thzhima/jw/Test.class
+DEBUG - Reader entry: Êþº¾   4 ?  com/thzhima/jw/Test  java/lang/Object <init> ()V Code
+DEBUG - Checking to see if class com.thzhima.jw.AdminDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.AdminUser matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.Class matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.beans.Student matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.AdminDAO2 matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.ClassDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.dao.StudentDAO matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.MybatisTemplate matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.jdbc.SessionUtil matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.LogTest matches criteria [is assignable to Object]
+DEBUG - Checking to see if class com.thzhima.jw.Test matches criteria [is assignable to Object]
+DEBUG - Opening JDBC Connection
+DEBUG - Created connection 592688102.
+DEBUG - Setting autocommit to false on JDBC Connection [oracle.jdbc.driver.T4CConnection@2353b3e6]
+DEBUG - ==>  Preparing: select * from t_admins where login_name=? and pwd=?
+DEBUG - ==> Parameters: admin(String), 123456(String)
+DEBUG - <==      Total: 1
+DEBUG - Resetting autocommit to true on JDBC Connection [oracle.jdbc.driver.T4CConnection@2353b3e6]
+DEBUG - Closing JDBC Connection [oracle.jdbc.driver.T4CConnection@2353b3e6]
+DEBUG - Returned connection 592688102 to pool.
