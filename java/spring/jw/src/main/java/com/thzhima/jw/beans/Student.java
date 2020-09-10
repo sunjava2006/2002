@@ -11,7 +11,7 @@ public class Student implements Serializable{
 	private String personID;
 	private String homeTown;
 	private String phone;
-	private Class myClass; //  ¶à¶Ô1¹ØÁª¹ØÏµ¡£ Java×éºÏ¹ØÏµ¡£
+	private Class myClass; 
 	private String photo;
 	public Integer getID() {
 		return ID;
@@ -87,7 +87,7 @@ public class Student implements Serializable{
 	@Override
 	public String toString() {
 		return "Student [ID=" + ID + ", stuNO=" + stuNO + ", name=" + name + ", gender=" + gender + ", personID="
-				+ personID + ", homeTown=" + homeTown + ", phone=" + phone + ", myClass=²»Êä³ö"  + ", photo=" + photo
+				+ personID + ", homeTown=" + homeTown + ", phone=" + phone + ", myClass=ä¸è¾“å‡º"  + ", photo=" + photo
 				+ "]";
 	}
 	

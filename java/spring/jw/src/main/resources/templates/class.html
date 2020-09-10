@@ -92,7 +92,7 @@
                   <div class="panel-heading">
                     查询
                   </div>
-                  <form action="/queryClass" method="GET">
+                  <form action="/queryClass.do" method="GET">
                   <div class="panel-body">
                     <div class="input-group">
                       
@@ -121,10 +121,10 @@
          </thead>
          <tbody>
      
-             <tr style="line-height:51px">
-                 <td>1</td>
-                 <td>111</td>
-                 <td>2222</td>
+             <tr style="line-height:51px" th:each="i:${list}">
+                 <td th:text="${i.id}"></td>
+                 <td th:text="${i.classNO}"></td>
+                 <td th:text="${i.className}"></td>
                  <td>
                     <button type="button" class="btn btn-info" onclick="modify(this)">修改</button>
                     <a href="/delClass?id=" class="btn btn-warning">删除</a>

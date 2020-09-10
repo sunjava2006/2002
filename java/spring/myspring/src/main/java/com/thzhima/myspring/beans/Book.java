@@ -3,6 +3,7 @@ package com.thzhima.myspring.beans;
 import java.beans.ConstructorProperties;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
 @Component(value = "javaPro")
@@ -31,6 +32,7 @@ public class Book {
 	}
 
 
+	
 	public Book(String name, Float price) {
 		super();
 		this.name = name;
