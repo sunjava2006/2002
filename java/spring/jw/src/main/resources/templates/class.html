@@ -110,7 +110,7 @@
                     </div>
                    </form>
 	
-		 <table class="table table-bordered table-hover text-warning">
+		 <table class="table table-bordered table-hover text-warning" th:if="${list ne null and list.size() gt 0}">
          <thead>
              <tr>
                  <th>id</th>
@@ -127,23 +127,29 @@
                  <td th:text="${i.className}"></td>
                  <td>
                     <button type="button" class="btn btn-info" onclick="modify(this)">修改</button>
-                    <a href="/delClass?id=" class="btn btn-warning">删除</a>
+                    <a th:href="@{/delClass.do(id=${i.id})}" class="btn btn-warning">删除</a>
                  </td>
              </tr>
              
            
          </tbody>
+         
      </table>
-		
+		<label th:if="${list ne null and list.size() eq 0}" >没有匹配的记录</label>
 
                    
                   </div>
                   <div class="panel-footer">
+                        <div th:if="${list ne null and list.size() gt 0}">
+						<label th:text="${'总记录数：'+totalCount}+','"></label>
+						<label th:text="${'总页数：'+totalPage}+','"></label>
+						<label th:text="${'当前页：'+currentPage}"></label>
+						<a th:if="${currentPage gt 1}" th:class="'btn btn-info'"
+						   th:href="@{/queryClass.do(currentPage=${currentPage-1},classNO=${classNO},className=${className})}">上一页</a>
+      					<a th:if="${currentPage lt totalPage}" class="btn btn-info"
+      					   th:href="@{/queryClass.do(currentPage=${currentPage+1},classNO=${classNO},className=${className})}">下一页</a>
                         
-
-      
-                        
-                        
+                        </div>
                     </div>
             </div>
             
@@ -151,7 +157,7 @@
 
     </div>
 
- <form action="/modifyClass" method="POST">
+ <form action="/modifyClass.do" method="POST">
         <input type="hidden" name="id" id="mid">
         <div class="modal fade"  id="modifyPop" role="dialog" tabindex="-1"><!-- 按ESC消除对话框，要设置tabindex属性 -->
             <div class="modal-dialog">

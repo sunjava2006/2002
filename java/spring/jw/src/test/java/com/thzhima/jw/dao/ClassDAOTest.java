@@ -26,7 +26,7 @@ class ClassDAOTest {
 //		fail("Not yet implemented");
 	}
 
-	@Test
+	//@Test
 	void testQueryByExample() {
 
 		Class c = new Class(null,null,null,null);
@@ -35,7 +35,7 @@ class ClassDAOTest {
 		assertEquals(14, list.size());
 	}
 	
-	@Test
+	//@Test
 	void testQueryByExample2() {
 
 		Class c = new Class(1,null,null,null);
@@ -44,7 +44,7 @@ class ClassDAOTest {
 		assertEquals(list.get(0).getId(),1);
 	}
 	
-	@Test
+	//@Test
 	void testQueryByExample3() {
 
 		Class c = new Class(null,"150101",null,null);
@@ -60,5 +60,11 @@ class ClassDAOTest {
 		assertEquals(list.size(),4);
 	}
 
+//	@Test
+	void testCountByExample() {
+		Class c = new Class(null,"1501%","%计算机%",null);
+		int count = dao.countByExample(c);
+		assertEquals(count, 10);
+	}
 
 }

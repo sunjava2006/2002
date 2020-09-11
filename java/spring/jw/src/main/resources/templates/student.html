@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/bower_components/jquery/dist/jquery.js"></script>
+    <script src="js/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+    <link rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap.css">
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="row">
+            <form action="/addStu.do" method="POST" enctype="multipart/form-data">
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h1>添加学生到指定班级</h1>
+                        <div class="input-group">
+                            <div class="input-group-addon">班级编号</div>
+                            <input type="text" class="form-control" name="myClass.classNO" placeholder="例如：150101">
+                        </div>
+
+                    </div>
+                    <div class="panel-body">
+
+                        <div class="input-group">
+                            <div class="input-group-addon">学号</div>
+                            <input type="text" class="form-control" name="stuNO">
+                            <div class="input-group-addon">姓名</div>
+                            <input type="text" class="form-control" name="name">
+                            <div class="input-group-addon">性别</div>
+                            <input type="text" class="form-control" name="gender">
+                            <div class="input-group-addon">身份证编号</div>
+                            <input type="text" class="form-control" name="personID">
+                        </div>
+                        <div class="input-group">
+                            <div class="input-group-addon">籍贯</div>
+                            <input type="text" class="form-control" name="homeTown">
+                            <div class="input-group-addon">电话</div>
+                            <input type="text" class="form-control" name="phone">
+                            <div class="input-group-addon">照片</div>
+                            <input type="file" class="form-control" name="photo1">
+
+                        </div>
+
+                    </div>
+                    <div class="panel-footer">
+                       <label th:text="${msg}"></label>
+                        <button type="submit" class="btn btn-info pull-right">添加</button>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+
+
+            </form>
+
+        </div>
+        <!-- ----------------------------------------------------  -->
+
+
+    </div>
+
+
+</body>
+
+</html>

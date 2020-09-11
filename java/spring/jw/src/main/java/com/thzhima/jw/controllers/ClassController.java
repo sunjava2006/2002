@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -55,11 +57,33 @@ public class ClassController {
 	
 	@RequestMapping(value = "/queryClass.do" , method = {RequestMethod.POST, RequestMethod.GET})
 	public String query(Class c, 
-			            @RequestParam(name = "currPage", required=false, defaultValue = "1")int page ,
+			            @RequestParam(name="currentPage", required=false, defaultValue = "1")int page ,
 			            ModelMap mm) {
 		List<Class> list = this.cs.query(c, page, this.pageSize);
+		int totalCount = this.cs.countByExam(c);
+		int totalPage = this.cs.pages(totalCount, this.pageSize);
+		
 		mm.addAttribute("list", list);
+		mm.addAttribute("totalCount", totalCount);
+		mm.addAttribute("totalPage", totalPage);
+		mm.addAttribute("currentPage", page);
+		mm.addAttribute("classNO", c.getClassNO());
+		mm.addAttribute("className", c.getClassName());
+		
 		System.out.println("pageSize:"+this.pageSize);
 		return "class";
+	}
+	
+	@RequestMapping("/delClass.do")
+	public String delClass(@RequestHeader(name = "Referer")String referer, int id) {
+		System.out.println(referer);
+		this.cs.delByID(id);
+		return "redirect:"+referer;
+	}
+	
+	@PostMapping("/modifyClass.do")
+	public String modifyClass(@RequestHeader("Referer")String referer, Class c ) {
+		this.cs.modifyClassInfo(c);
+		return "redirect:"+referer;
 	}
 }
