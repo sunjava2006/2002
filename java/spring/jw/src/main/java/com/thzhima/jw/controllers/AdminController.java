@@ -1,5 +1,7 @@
 package com.thzhima.jw.controllers;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,13 +19,22 @@ public class AdminController {
 	private AdminService adminService;
 	
 	@RequestMapping("/login.do")
-	public ModelAndView login(AdminUser us, HttpSession session) {
+	public ModelAndView login(AdminUser us, HttpSession session, boolean autoLogin, HttpServletResponse res) {
 		ModelAndView mv = new ModelAndView();
 		String viewName = "manage";
 		AdminUser u = this.adminService.login(us);
 		if(u != null) {// login success
 			mv.setViewName(viewName);
 			session.setAttribute("userInfo", u);
+			if(autoLogin) {
+				Cookie c = new Cookie("loginName", u.getLoginName());
+				Cookie c2 = new Cookie("pwd", u.getPwd());
+				c.setMaxAge(10*24*60*60);
+				c2.setMaxAge(10*24*60*60);
+				res.addCookie(c);
+				res.addCookie(c2);
+				
+			}
 		}
 		else {
 			viewName = "index";

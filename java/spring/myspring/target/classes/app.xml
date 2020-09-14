@@ -2,13 +2,24 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-	                    http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
-		                http://www.springframework.org/schema/context 
-		                http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+http://www.springframework.org/schema/aop 
+http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
+
+ <context:component-scan base-package="com.thzhima">
+
+   </context:component-scan>
+   
+  <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+  <aop:config proxy-target-class="true"></aop:config>
    <bean name="javaBook" class="com.thzhima.myspring.beans.Book" scope="prototype">
+   
       <property name="name" value="Java Professional"></property>
       <property name="price" value="23.16"></property>
 <!--        <CONSTRUCTOR-ARG INDEX="0" NAME="NAME" VALUE="PYTHONPROFESSIONAL"></CONSTRUCTOR-ARG> -->
@@ -26,7 +37,6 @@
    
    <bean name="vw" class="com.thzhima.myspring.beans.Car" p:brand="vw"></bean>
    
-   <context:component-scan base-package="com.thzhima">
-<!--       <context:exclude-filter type="annotation" expression=""/> -->
-   </context:component-scan>
+  
+   
 </beans>
