@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/bower_components/jquery/dist/jquery.js"></script>
+    <script src="js/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="js/bower_components/vue/dist/vue.js"></script>
+    <script src="js/bower_components/axios/dist/axios.js"></script>
+
+    <title>添加教学楼</title>
+</head>
+<body>
+
+    <div id="app" class="container">
+        
+        <div class="panel panel-warning">
+              <div class="panel-heading">
+                    <h3 class="panel-title">添加教学楼</h3>
+              </div>
+              <div class="panel-body">
+                
+                   <div class="input-group">
+                       <div class="input-group-addon">名称：</div>
+                       <input type="text" class="form-control" v-model="buildingName" >
+                       <div class="input-group-addon">经度：</div>
+                       <input type="text" class="form-control" v-model="longitude">
+                       <div class="input-group-addon">纬度：</div>
+                       <input type="text" class="form-control" v-model="latitude" >
+                       
+                   </div>
+                   
+              </div>
+              <div class="panel-footer">
+                  {{msg}}
+                <button class="btn btn-warning pull-right" v-on:click="addBuilding">添加</button>
+                <br><br>
+               
+              </div>
+        </div>
+
+       <!-- --------------------------------------------------------- -->
+       
+       <div class="panel panel-warning">
+             <div class="panel-heading">
+                   <h3 class="panel-title">按名称查询</h3>
+             </div>
+             <div class="panel-body">
+                   
+                   <div class="input-group">
+                       <div class="input-group-addon">名称</div>
+                       <input type="text" class="form-control" v-model="searchKey" >
+                       <span class="input-group-btn">
+                            <button type="button" class="btn btn-warning" v-on:click="search">查询</button>
+                        </span>
+
+                   </div>
+
+                   
+                   <table class="table table-bordered table-hover" v-if="searchResult">
+                       <thead>
+                           <tr>
+                               <th>教学楼</th>
+                               <th>经度</th>
+                               <th>纬度</th>
+                           </tr>
+                       </thead>
+                       <tbody>
+
+                           <tr  v-for="(item, index) in searchResult.data" :key="index">
+                               <td>{{item.name}}</td>
+                               <td>{{item.longitude}}</td>
+                               <td>{{item.latitude}}</td>
+                           </tr>
+                       </tbody>
+                   </table>
+                   
+             </div>
+             
+            <div class="panel-footer">
+                   <div v-if="searchResult">
+                       共{{searchResult.totalCount}}条记录，共{{searchResult.totalPage}}页。
+                       当前第{{searchResult.currentPage}}页。
+                       <button v-on:click="previous" v-if="searchResult.currentPage &gt; 1" class="btn btn-warning" >上一页</button>
+                       <button v-on:click="next" v-if="searchResult.currentPage &lt; searchResult.totalPage" class="btn btn-warning">下一页</button>
+                   </div>
+            </div>
+             
+             
+       </div>
+       
+        
+
+    </div>
+    
+    <script>
+       var app = new Vue({
+           el:'#app',
+           data() {
+               return {
+                   msg:"",
+                   buildingName:null,
+                   longitude:null,
+                   latitude:null,
+                   searchKey:"",
+                   searchResult:null
+               }
+           },
+           methods: {
+            addBuilding(){
+      
+                axios.post("/addBuilding.do","name="+this.buildingName+"&longitude="+this.longitude+"&latitude="+this.latitude)
+                .then(res => {
+                    console.log(res)
+                    this.msg=res.data.result;
+                })
+                .catch(err => {
+                    this.msg=res.data.result;
+                    console.error(err); 
+                })
+             },
+             search(){
+
+                 axios.post("/searchBuilding.do","name="+this.searchKey)
+                 .then(res => {
+                     console.log(res)
+                     if(res.data){
+                        this.searchResult=res.data;
+                     }
+                     
+                 })
+                 .catch(err => {
+                     console.error(err); 
+                 })
+             },
+             previous(){
+                axios.post("/searchBuilding.do","name="+this.searchKey+"&page="+(this.searchResult.currentPage-1))
+                 .then(res => {
+                     console.log(res)
+                     if(res.data){
+                        this.searchResult=res.data;
+                     }
+                     
+                 })
+                 .catch(err => {
+                     console.error(err); 
+                 })
+             },
+             next(){
+                axios.post("/searchBuilding.do","name="+this.searchKey+"&page="+(this.searchResult.currentPage+1))
+                 .then(res => {
+                     console.log(res)
+                     if(res.data){
+                        this.searchResult=res.data;
+                     }
+                     
+                 })
+                 .catch(err => {
+                     console.error(err); 
+                 })
+             }
+           }
+          
+       });
+
+
+    </script>
+
+
+
+</body>
+</html>

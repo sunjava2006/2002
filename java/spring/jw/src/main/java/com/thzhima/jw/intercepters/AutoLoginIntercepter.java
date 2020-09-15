@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -19,13 +20,20 @@ public class AutoLoginIntercepter implements HandlerInterceptor{
 	@Autowired
 	private AdminService as;
 	
+	@Value("${server.port}")
+	private int port;
+	
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		System.out.println("------------------=====================");
 		HttpSession session = request.getSession(true);
-		
+		System.out.println("######################################");
 		Object o  = session.getAttribute("userInfo");
+		System.out.println("Port: "+this.port);
+		System.out.println("userInfo:"+o);
+		System.out.println("######################################");
+		
 		if(o==null) {
 			System.out.println("------------------now login now.");
 			Cookie[] cks = request.getCookies();

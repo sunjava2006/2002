@@ -28,7 +28,7 @@ public class ClassController {
 	@Autowired
 	private ClassService cs;
 	
-	@GetMapping("/*.html")
+	@GetMapping("/*.htm")
 	public String classHtml(HttpServletRequest req) {
 		String url = req.getRequestURI();
 		System.out.println(url);

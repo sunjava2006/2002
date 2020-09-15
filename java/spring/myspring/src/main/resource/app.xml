@@ -18,6 +18,8 @@ http://www.springframework.org/schema/context/spring-context-3.2.xsd">
    
   <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
   <aop:config proxy-target-class="true"></aop:config>
+  
+  
    <bean name="javaBook" class="com.thzhima.myspring.beans.Book" scope="prototype">
    
       <property name="name" value="Java Professional"></property>
