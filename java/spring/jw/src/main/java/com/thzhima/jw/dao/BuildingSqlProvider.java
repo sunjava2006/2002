@@ -2,6 +2,8 @@ package com.thzhima.jw.dao;
 
 import org.apache.ibatis.jdbc.SQL;
 
+import com.thzhima.jw.beans.Building;
+
 public class BuildingSqlProvider {
 
 	public String listByPage(String name, int page, int size) {
@@ -23,6 +25,29 @@ public class BuildingSqlProvider {
 		if(name != null && !"".equals(name)) {
 			sql.WHERE("name like '%"+name+"%'");
 		}
+		return sql.toString();
+	}
+	
+	public String update(Building b) {
+		SQL sql = new SQL();
+		
+		sql.UPDATE("t_buildings");
+		if(b.getName()!= null && !"".equals(b.getName().trim())) {
+			sql.SET("name=#{name}");
+		}
+		if(b.getLongitude()!= null ) {
+			sql.SET("longitude=#{longitude}");
+		}
+		if(b.getLatitude()!= null) {
+			sql.SET("latitude=#{latitude}");
+		}
+		if(b.getID()!=null) {
+			sql.WHERE("id=#{ID}");
+		}
+		else {
+			sql.WHERE("1=2");
+		}
+		
 		return sql.toString();
 	}
 }

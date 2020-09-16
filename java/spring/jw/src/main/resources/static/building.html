@@ -65,6 +65,7 @@
                                <th>教学楼</th>
                                <th>经度</th>
                                <th>纬度</th>
+                               <th></th>
                            </tr>
                        </thead>
                        <tbody>
@@ -73,6 +74,14 @@
                                <td>{{item.name}}</td>
                                <td>{{item.longitude}}</td>
                                <td>{{item.latitude}}</td>
+                               <td><button class="btn btn-danger" :id="index" v-on:click="deleteBuliding" type="button">
+                                   删除
+                                  </button>
+
+                                  <button class="btn btn-danger" :id="index" v-on:click="modifyBuilding" type="button">
+                                    修改
+                                   </button>
+                               </td>
                            </tr>
                        </tbody>
                    </table>
@@ -91,7 +100,32 @@
              
        </div>
        
-        
+       <!--------------------------------------------------------------------> 
+       <div class="modal fade"  id="modifyPop" role="dialog" tabindex="-1"><!-- 按ESC消除对话框，要设置tabindex属性 -->
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+                    <h4> 教学楼信息修改</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="input-group">
+                        <div class="input-group-addon">名称：</div>
+                        <input type="text" class="form-control" v-model="buildingName2" >
+                        <div class="input-group-addon">经度：</div>
+                        <input type="text" class="form-control" v-model="longitude2">
+                        <div class="input-group-addon">纬度：</div>
+                        <input type="text" class="form-control" v-model="latitude2" >
+                        
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button"  class="btn btn-danger" data-dismiss="modal" v-on:click="saveBuilding">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </div>
     
@@ -105,6 +139,11 @@
                    longitude:null,
                    latitude:null,
                    searchKey:"",
+                   id2:"",
+                   buildingName2:null,
+                   longitude2:null,
+                   latitude2:null,
+                   currentModifyIndex:0,
                    searchResult:null
                }
            },
@@ -159,6 +198,45 @@
                  })
                  .catch(err => {
                      console.error(err); 
+                 })
+             },
+             deleteBuliding(evt){
+               var index = evt.target.id;
+               var id = this.searchResult.data[index].id;
+               axios.post("\delBuilding.do","id="+id+"&name="+this.searchKey+"&page="+(this.searchResult.currentPage))
+               .then(res => {
+                   this.searchResult = res.data;
+                   
+               })
+              
+               
+             },
+             modifyBuilding(evt){
+
+                var index = evt.target.id;
+                this.currentModifyIndex = index;
+                var item = this.searchResult.data[index];
+                this.id2 = item.id;
+                this.buildingName2 = item.name;
+                this.latitude2 = item.latitude;
+                this.longitude2 = item.longitude;
+
+                $('#modifyPop').modal('show');
+             },
+
+             saveBuilding(){
+                 axios.post("/saveBuilding.do","ID="+this.id2+"&name="+this.buildingName2+"&latitude="+this.latitude2+"&longitude="+this.longitude2)
+                 .then(res => {
+                     if(res.data.result=="success"){
+                         var item = this.searchResult.data[this.currentModifyIndex];
+                         item.name = this.buildingName2;
+                         item.latitude = this.latitude2;
+                         item.longitude = this.longitude2;
+                     }
+                 })
+                 .catch(err => {
+                     console.error(err); 
+                     alert(err);
                  })
              }
            }

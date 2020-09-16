@@ -2,6 +2,7 @@ package com.thzhima.jw.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
@@ -11,6 +12,7 @@ import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.SelectKey;
 import org.apache.ibatis.annotations.SelectProvider;
+import org.apache.ibatis.annotations.UpdateProvider;
 
 import com.thzhima.jw.beans.Building;
 
@@ -34,4 +36,13 @@ public interface BuildingDAO {
 	@SelectProvider(type = BuildingSqlProvider.class, method = "countSql")
 	@ResultType(Integer.class)
 	public int count(String name);
+	
+	@Delete("delete from t_buildings where id=#{id}")
+	@ResultType(Integer.class)
+	public int delByID(int id);
+	
+	@UpdateProvider(type = BuildingSqlProvider.class, method = "update")
+	@ResultType(Integer.class)
+	public int updateByExample(Building b);
+	
 }

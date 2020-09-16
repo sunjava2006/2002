@@ -30,4 +30,13 @@ public class BuildingService {
 	public int totalPage(double totalCount, int size) {
 		return (int)(Math.ceil(totalCount / size));
 	}
+	
+	public int deleteByID(int id) {
+		return this.bd.delByID(id);
+	}
+	
+	
+	public int update(Building b) {
+		return this.bd.updateByExample(b);
+	}
 }
