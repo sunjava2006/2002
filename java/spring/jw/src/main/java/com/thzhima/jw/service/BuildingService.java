@@ -39,4 +39,8 @@ public class BuildingService {
 	public int update(Building b) {
 		return this.bd.updateByExample(b);
 	}
+	
+	public Building findByNmae(String name) {
+		return this.bd.findByName(name);
+	}
 }

@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
@@ -44,5 +45,9 @@ public interface BuildingDAO {
 	@UpdateProvider(type = BuildingSqlProvider.class, method = "update")
 	@ResultType(Integer.class)
 	public int updateByExample(Building b);
+	
+	@Select("select * from t_buildings where name = #{name}")
+	@ResultMap("BuildingMapper")
+	public Building findByName(String name);
 	
 }

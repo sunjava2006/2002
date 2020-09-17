@@ -1,6 +1,10 @@
 package com.thzhima.jw.configurations;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -21,4 +25,6 @@ public class MyMVCConfig implements WebMvcConfigurer{
 		registry.addInterceptor(auto).addPathPatterns("/*");
 		
 	}
+	
+	
 }

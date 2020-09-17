@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/bower_components/jquery/dist/jquery.js"></script>
+    <script src="js/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="js/bower_components/vue/dist/vue.js"></script>
+    <script src="js/bower_components/axios/dist/axios.js"></script>
+    <script src="js/bower_components/qs/dist/qs.min.js"></script>
+    <title>添加教室</title>
+</head>
+<body>
+    
+     
+     <div class="container" id="app">
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                  <h3 class="panel-title">添加教学楼</h3>
+            </div>
+            <div class="panel-body">
+                <div class="input-group">
+                    <div class="input-group-addon">名称</div>
+                    <input type="text" class="form-control" v-model="buildingName" >
+                    <span class="input-group-btn">
+                         <button type="button" class="btn btn-warning" v-on:click="searchBuilding">查询</button>
+                     </span>
+                </div>
+                <table class="table table-bordered table-hover" v-if="currentBuilding">
+                    <thead v-if="currentBuilding">
+                        <tr>
+                            <th>教学楼</th>
+                            <th>经度</th>
+                            <th>纬度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr >
+                            <td>{{currentBuilding.name}}</td>
+                            <td>{{currentBuilding.longitude}}</td>
+                            <td>{{currentBuilding.latitude}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                 <div class="input-group">
+                     <div class="input-group-addon">名称：</div>
+                     <input type="text" class="form-control" v-model="classRoomName" >
+                     
+                 </div>
+                 
+            </div>
+            <div class="panel-footer">
+                {{msg}}
+              <button class="btn btn-warning pull-right" @click="addClassRoom"  >添加</button>
+              <br><br>
+             
+            </div>
+      </div>
+     </div>
+     
+     <script>
+   
+         var app = new Vue({
+             el:'#app',
+             data(){
+                 return{
+                    buildingName:'',
+                    msg:'',
+                    currentBuilding:null,
+                    classRoomName:null,
+                    classRoom:{"name": this.classRoomName, "ID":null, "building":this.currentBuilding}
+                 }
+             },
+             methods:{
+                searchBuilding(){
+                    if(this.buildingName){
+                        axios.get("/classRoom/"+this.buildingName)
+                        .then(res => {
+                            console.log(res);
+                            this.currentBuilding = res.data;
+
+                        })
+                        .catch(err => {
+                            console.error(err); 
+                        })
+                    }
+                   
+                },
+                addClassRoom(){
+                	
+                	
+                	
+                	
+                	var param = {"name":this.classRoomName, "building":this.currentBuilding};
+                    //axios.post("/addClassRoom",JSON.stringify(param),{headers:{'Content-Type': 'application/json'}})
+                     axios.post("/addClassRoom",axios.qs.stringify(param))
+                    .then(res => {
+                        console.log(res)
+                    })
+                    .catch(err => {
+                        console.error(err); 
+                    })
+                }
+             }
+         })
+
+
+     </script>
+
+</body>
+</html>
