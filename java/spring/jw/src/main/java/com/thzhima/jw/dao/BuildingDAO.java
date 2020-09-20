@@ -50,4 +50,9 @@ public interface BuildingDAO {
 	@ResultMap("BuildingMapper")
 	public Building findByName(String name);
 	
+	
+	@Select("select * from t_buildings where id=#{id}")
+	@ResultMap("BuildingMapper")
+	public Building findByID(int id);
+	
 }

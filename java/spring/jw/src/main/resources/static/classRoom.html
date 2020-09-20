@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap-theme.css">
     <script src="js/bower_components/vue/dist/vue.js"></script>
     <script src="js/bower_components/axios/dist/axios.js"></script>
-    <script src="js/bower_components/qs/dist/qs.min.js"></script>
+    <script src="js/bower_components/qs/src/qs.js"></script>
     <title>添加教室</title>
 </head>
 <body>
@@ -59,6 +59,69 @@
              
             </div>
       </div>
+
+      <!-- ------------------------------------------------------------------- -->
+
+      <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h3 class="panel-title">按名称查询</h3>
+        </div>
+        <div class="panel-body">
+              
+              <div class="input-group">
+                  <div class="input-group-addon">名称</div>
+                  <input type="text" class="form-control" v-model="searchKey" >
+                  <span class="input-group-btn">
+                       <button type="button" class="btn btn-warning" v-on:click="search">查询</button>
+                   </span>
+
+              </div>
+
+              
+              <table class="table table-bordered table-hover" v-if="searchResult">
+                  <thead>
+                      <tr>
+                          <th>教室名</th>
+                          <th>教学楼</th>
+                          <th>经度</th>
+                          <th>纬度</th>
+                          <th></th>
+                      </tr>
+                  </thead>
+                  <tbody>
+
+                      <tr  v-for="(item, index) in searchResult" :key="index">
+                          <td>{{item.name}}</td>
+                          <td>{{item.building.name}}</td>
+                          <td>{{item.building.longitude}}</td>
+                          <td>{{item.building.latitude}}</td>
+                          <td><button class="btn btn-danger" :id="item.id"type="button" v-on:click="delClassRoom">
+                              删除
+                             </button>
+
+                             <button class="btn btn-danger" :id="index"  type="button">
+                               修改
+                              </button>
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+              
+        </div>
+        
+       <div class="panel-footer">
+              <div v-if="searchResult">
+                  共{{searchResult.totalCount}}条记录，共{{searchResult.totalPage}}页。
+                  当前第{{searchResult.currentPage}}页。
+                  <button v-on:click="previous" v-if="searchResult.currentPage &gt; 1" class="btn btn-warning" >上一页</button>
+                  <button v-on:click="next" v-if="searchResult.currentPage &lt; searchResult.totalPage" class="btn btn-warning">下一页</button>
+              </div>
+       </div>
+        
+        
+  </div>
+
+      <!-- --- ------------------------------------------------------------------>
      </div>
      
      <script>
@@ -71,13 +134,15 @@
                     msg:'',
                     currentBuilding:null,
                     classRoomName:null,
-                    classRoom:{"name": this.classRoomName, "ID":null, "building":this.currentBuilding}
+                    classRoom:{"name": this.classRoomName, "ID":null, "building":this.currentBuilding},
+                    searchResult:null,
+                    searchKey:null
                  }
              },
              methods:{
                 searchBuilding(){
                     if(this.buildingName){
-                        axios.get("/classRoom/"+this.buildingName)
+                        axios.get("/building/"+this.buildingName)
                         .then(res => {
                             console.log(res);
                             this.currentBuilding = res.data;
@@ -90,13 +155,33 @@
                    
                 },
                 addClassRoom(){
-                	
-                	
-                	
-                	
                 	var param = {"name":this.classRoomName, "building":this.currentBuilding};
-                    //axios.post("/addClassRoom",JSON.stringify(param),{headers:{'Content-Type': 'application/json'}})
-                     axios.post("/addClassRoom",axios.qs.stringify(param))
+                     axios.post("/addClassRoom",param)
+                    .then(res => {
+                        console.log(res)
+                        if(res.data.result=='success'){
+                        	this.msg='添加教室成功:'+this.classRoomName;
+                        }
+                    })
+                    .catch(err => {
+                        console.error(err); 
+                    })
+                },
+                search(){
+                    axios.get("/classRoom/"+this.searchKey)
+                    .then(res => {
+                        console.log(res)
+                        this.searchResult = res.data;
+                    })
+                    .catch(err => {
+                        console.error(err); 
+                    })
+                },
+                delClassRoom(evt){
+                	var classRoomId = evt.target.id;
+                	console.log(classRoomId);
+                
+                    axios.delete("/classRoom/"+classRoomId)
                     .then(res => {
                         console.log(res)
                     })

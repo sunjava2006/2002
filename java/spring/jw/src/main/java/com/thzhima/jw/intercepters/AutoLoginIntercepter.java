@@ -53,7 +53,7 @@ public class AutoLoginIntercepter implements HandlerInterceptor{
 					System.out.println("满足自动登录条件");
 					AdminUser u  = as.login(new AdminUser(null, loginName, pwd));
 					session.setAttribute("userInfo", u);
-					response.sendRedirect("/manage.html");
+					response.sendRedirect("/manage.htm");
 				}
 			}
 		}

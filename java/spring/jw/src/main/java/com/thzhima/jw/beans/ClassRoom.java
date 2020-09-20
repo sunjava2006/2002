@@ -7,6 +7,7 @@ public class ClassRoom implements Serializable{
 	private Integer ID;
 	private String name;
 	private Building building;
+	
 	public Integer getID() {
 		return ID;
 	}
