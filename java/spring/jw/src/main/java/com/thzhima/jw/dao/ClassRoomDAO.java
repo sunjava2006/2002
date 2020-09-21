@@ -35,6 +35,10 @@ public interface ClassRoomDAO {
 	        		 })
 	public List<ClassRoom> findByName(String name);
 	
+	@Select("select * from t_classrooms where id=#{id}")
+	@ResultMap("ClassRoomMapper")
+	public ClassRoom findByID(int id);
+	
 	
 	@Delete("delete from t_classrooms where id=#{id}")
 	@ResultType(Integer.class)

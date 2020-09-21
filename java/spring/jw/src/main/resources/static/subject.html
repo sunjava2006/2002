@@ -24,30 +24,41 @@
                  
                     <div class="input-group">
                         <div class="input-group-addon">班级</div>
-                        <select type="text" class="form-control"  >
+                        <select type="text" class="form-control" v-model="classID" >
                             <option v-for="(item, index) in classList" :key="index" v-bind:value="item.id" >{{item.className}}</option>
                             
                         </select>
 
                         <div class="input-group-addon">课程</div>
-                        <select type="text" class="form-control"  >
-                            <option v-for="(item, index) in subjectList" :key="index" v-bind:value="item.ID">{{item.name}}</option>
+                        <select type="text" class="form-control" v-model="subjectID" >
+                            <option v-for="(item, index) in subjectList" :key="index" v-bind:value="item.id">{{item.name}}</option>
                            
                         </select>
 
                         <div class="input-group-addon">教室</div>
-                        <select type="text" class="form-control"  >
-                            <option v-for="(item, index) in classRoomList" :key="index" v-bind:value="item.ID">{{item.name}}</option>
+                        <select type="text" class="form-control" v-model="classRoomID" >
+                            <option v-for="(item, index) in classRoomList" :key="index" v-bind:value="item.id">{{item.name}}</option>
                             
                         </select>
 
+                        <div class="input-group-addon">星期</div>
+                        <select type="text" class="form-control" v-model="week" >
+                            <option v-for="(item, index) in weekList" :key="index" v-bind:value="item.value">{{item.name}}</option>
+                           
+                        </select>
+
                         <div class="input-group-addon">时间</div>
-                        <select type="text" class="form-control"  >
-                            <option v-for="(item, index) in timesList" :key="index" v-bind:value="item.ID">{{item.name}}</option>
+                        <select type="text" class="form-control" v-model="timesID" >
+                            <option v-for="(item, index) in timesList" :key="index" v-bind:value="item.id">{{item.name}}</option>
                            
                         </select>
                     </div>
                     
+              </div>
+              <div  class="panel-footer">
+                  {{msg}}
+                  <button type="button" class="btn btn-default pull-right" v-on:click="applySubject">确定</button>
+                  <br><br>
               </div>
         </div>
         
@@ -62,7 +73,15 @@
                      classList:[],
                      subjectList:[],
                      classRoomList:[],
-                     timesList:[]
+                     timesList:[],
+                     classID:null,
+                     subjectID:null,
+                     classRoomID:null,
+                     timesID:null,
+                     msg:'',
+                     week:0,
+                     weekList:[{"name":"星期日", "value":0},{"name":"星期一", "value":1},{"name":"星期二", "value":2} ,
+                     {"name":"星期三", "value":3},{"name":"星期四", "value":4},{"name":"星期五", "value":5}]
                  }
              },
              created() {
@@ -78,6 +97,25 @@
                  .catch(err => {
                      console.error(err); 
                  })
+             },
+             methods: {
+                applySubject(){
+                    var param="myClass.id="+this.classID+"&classRoom.ID="+this.classRoomID+"&subject.ID="+this.subjectID+"&times.ID="+this.timesID+"&week="+this.week;
+                    console.log(param);
+                    axios.post("/applySubject",param)
+                    .then(res => {
+                        console.log(res)
+                        if(res.data.result=='success'){
+                            this.msg='添加成功'
+                        }
+                        else{
+                            this.msg='添加失败'
+                        }
+                    })
+                    .catch(err => {
+                        console.error(err); 
+                    })
+                }
              },
          })
 

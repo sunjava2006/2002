@@ -7,8 +7,8 @@ public class Times implements Serializable {
 
 	private Integer ID;
 	private String name;
-	private Date startTime;
-	private Date endTime;
+	private Double startTime;
+	private Double endTime;
 	public Integer getID() {
 		return ID;
 	}
@@ -21,19 +21,19 @@ public class Times implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Date getStartTime() {
+	public Double getStartTime() {
 		return startTime;
 	}
-	public void setStartTime(Date startTime) {
+	public void setStartTime(Double startTime) {
 		this.startTime = startTime;
 	}
-	public Date getEndTime() {
+	public Double getEndTime() {
 		return endTime;
 	}
-	public void setEndTime(Date endTime) {
+	public void setEndTime(Double endTime) {
 		this.endTime = endTime;
 	}
-	public Times(Integer iD, String name, Date startTime, Date endTime) {
+	public Times(Integer iD, String name, Double startTime, Double endTime) {
 		super();
 		ID = iD;
 		this.name = name;
@@ -48,6 +48,8 @@ public class Times implements Serializable {
 	public String toString() {
 		return "Times [ID=" + ID + ", name=" + name + ", startTime=" + startTime + ", endTime=" + endTime + "]";
 	}
+	
+	
 	
 	
 }

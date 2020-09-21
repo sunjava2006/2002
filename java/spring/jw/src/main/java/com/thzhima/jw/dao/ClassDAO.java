@@ -62,4 +62,9 @@ public interface ClassDAO {
    	@Result(property = "classNO", column = "class_no")}
    	)
 	public List<Class> listAll();
+	
+	
+	@Select("select * from t_classes where id=#{id}")
+	@ResultMap("ClassMapper2")
+	public Class findByID2(Integer id);
 }

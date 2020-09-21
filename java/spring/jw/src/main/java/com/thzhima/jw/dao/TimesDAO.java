@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
 
@@ -21,4 +22,10 @@ public interface TimesDAO {
 			@Result(property = "endTime", column = "end_time")
 	})
 	public List<Times> listAll();
+	
+	@Select("select * from t_times where id=#{id}")
+	@ResultMap("TimesMapper")
+	public Times findByID(int id);
+	
+	
 }
