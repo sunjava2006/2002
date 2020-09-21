@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排课</title>
+    <script src="js/bower_components/jquery/dist/jquery.js"></script>
+    <script src="js/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="js/bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="js/bower_components/vue/dist/vue.js"></script>
+    <script src="js/bower_components/axios/dist/axios.js"></script>
+</head>
+<body>
+    
+    <div class="container" id="app">
+        
+        
+        <div class="panel panel-default">
+              <div class="panel-heading">
+                    <h3 class="panel-title">排课</h3>
+              </div>
+              <div class="panel-body">
+                 
+                    <div class="input-group">
+                        <div class="input-group-addon">班级</div>
+                        <select type="text" class="form-control"  >
+                            <option v-for="(item, index) in classList" :key="index" v-bind:value="item.id" >{{item.className}}</option>
+                            
+                        </select>
+
+                        <div class="input-group-addon">课程</div>
+                        <select type="text" class="form-control"  >
+                            <option v-for="(item, index) in subjectList" :key="index" v-bind:value="item.ID">{{item.name}}</option>
+                           
+                        </select>
+
+                        <div class="input-group-addon">教室</div>
+                        <select type="text" class="form-control"  >
+                            <option v-for="(item, index) in classRoomList" :key="index" v-bind:value="item.ID">{{item.name}}</option>
+                            
+                        </select>
+
+                        <div class="input-group-addon">时间</div>
+                        <select type="text" class="form-control"  >
+                            <option v-for="(item, index) in timesList" :key="index" v-bind:value="item.ID">{{item.name}}</option>
+                           
+                        </select>
+                    </div>
+                    
+              </div>
+        </div>
+        
+
+    </div>
+    
+     <script>
+         var app = new Vue({
+             el:"#app",
+             data(){
+                 return{
+                     classList:[],
+                     subjectList:[],
+                     classRoomList:[],
+                     timesList:[]
+                 }
+             },
+             created() {
+                 axios.get("/initData")
+                 .then(res => {
+                     console.log(res)
+                     this.classList = res.data.classList;
+                     console.log(this.classList);
+                     this.subjectList = res.data.subjectList;
+                     this.classRoomList = res.data.classRoomList;
+                     this.timesList = res.data.timesList;
+                 })
+                 .catch(err => {
+                     console.error(err); 
+                 })
+             },
+         })
+
+
+     </script>
+
+</body>
+</html>

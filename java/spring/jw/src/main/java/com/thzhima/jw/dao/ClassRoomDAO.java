@@ -7,6 +7,7 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.One;
 import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
@@ -38,5 +39,10 @@ public interface ClassRoomDAO {
 	@Delete("delete from t_classrooms where id=#{id}")
 	@ResultType(Integer.class)
 	public int delByID(int id);
+	
+	@Select("select * from t_classrooms")
+	@ResultMap("ClassRoomMapper")
+	public List<ClassRoom> listAll();
+	
 	
 }

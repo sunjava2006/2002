@@ -79,4 +79,8 @@ public class ClassService {
     public int modifyClassInfo(Class c) {
     	return this.classDao.updateByExample(c);
     }
+    
+    public List<Class> listAll(){
+    	return this.classDao.listAll();
+    }
 }

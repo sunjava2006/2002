@@ -29,7 +29,7 @@ public interface ClassDAO {
 	@Select("select * from t_classes where id=#{id}")
 	@Results(id="ClassMapper",
 	         value= {
-	        	@Result(property = "id", column = "id"),
+	        	@Result(property = "id", column = "id", id=true),
 	        	@Result(property = "className", column = "class_Name"),
 	        	@Result(property = "classNO", column = "class_no"),
 	        	@Result(property = "students", column = "id", 
@@ -52,4 +52,14 @@ public interface ClassDAO {
 	@UpdateProvider(type = ClassSqlProvider.class, method = "updateByExam")
 	@ResultType(Integer.class)
 	public int updateByExample(Class c);
+	
+	
+	@Select("select * from t_classes")
+	@Results(id="ClassMapper2",
+    value= {
+   	@Result(property = "id", column = "id", id=true),
+   	@Result(property = "className", column = "class_Name"),
+   	@Result(property = "classNO", column = "class_no")}
+   	)
+	public List<Class> listAll();
 }

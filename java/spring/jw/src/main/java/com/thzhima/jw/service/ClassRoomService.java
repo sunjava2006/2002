@@ -24,4 +24,8 @@ public class ClassRoomService {
     public int delByID(int id) {
     	return this.dao.delByID(id);
     }
+    
+    public List<ClassRoom> listAll(){
+    	return this.dao.listAll();
+    }
 }
